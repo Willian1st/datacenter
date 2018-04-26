@@ -1,0 +1,78 @@
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<script src="../jquery.js"></script>
+<script src="../../travel/js/easyui/jquery.easyui.min.js"></script>
+<script src="../../travel/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+<!-- 截屏CSS start -->
+<link rel="stylesheet" href="jquery.Jcrop.css" type="text/css" />
+<style type="text/css">
+.jcrop-holder {
+	position: absolute !important;
+	top: 0px;
+	left: 0px;
+}
+
+.jcrop-holder>img {
+	opacity: 0.6 !important;
+}
+</style>
+<!-- 截屏CSS end -->
+<title>ScreenShot</title>
+</head>
+<body>
+	<table id="user"></table>
+	<!-- 截屏 start -->
+	<span id="ss"
+		style="position: fixed; bottom: 20px; left: 20px; cursor: pointer;">截屏</span>
+	<script type="text/javascript" src="html2canvas.js"></script>
+	<script src="jquery.Jcrop.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#ss").on("click", function(event) {
+				event.preventDefault();
+				html2canvas(document.body, {
+					allowTaint : true,
+					taintTest : false,
+					onrendered : function(canvas) {
+						canvas.id = "mycanvas";
+						//生成base64图片数据
+						var dataUrl = canvas.toDataURL();
+						var newImg = document.createElement("img");
+						newImg.src = dataUrl;
+						$(newImg).attr("id", "pic");
+						$(newImg).css({
+							"position" : "absolute",
+							"top" : 0,
+							"left" : 0
+						})
+						document.body.appendChild(newImg);
+
+						//截图
+						jQuery(function($) {
+							var japi;
+							jQuery('#pic').Jcrop({
+								bgFade : true,
+								bgOpacity : .6,
+								onRelease : releaseCheck
+							}, function() {
+								japi = this;
+							});
+
+							function releaseCheck() {
+								/* japi.setOptions({
+									allowSelect : false
+								}); */
+								japi.destroy();
+								$("#pic").remove();
+							}
+						});
+					}
+				});
+			});
+		});
+	</script>
+	<!-- 截屏 end -->
+</body>
+</html>

@@ -1,0 +1,540 @@
+android.support.v4.app.BackStackState
+android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.Fragment: Fragment()
+android.support.v4.app.Fragment$SavedState
+android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentActivity: FragmentActivity()
+android.support.v4.app.FragmentManagerState
+android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentState
+android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
+android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
+android.support.v4.app.FragmentTabHost$SavedState
+android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
+android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
+android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
+android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
+android.support.v4.view.PagerTabStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.PagerTabStrip: void setBackgroundColor(int)
+android.support.v4.view.PagerTabStrip: void setBackgroundResource(int)
+android.support.v4.view.PagerTabStrip: void setDrawFullUnderline(boolean)
+android.support.v4.view.PagerTabStrip: boolean getDrawFullUnderline()
+android.support.v4.view.PagerTabStrip: int getMinHeight()
+android.support.v4.view.PagerTitleStrip: void setSingleLineAllCaps(android.widget.TextView)
+android.support.v4.view.PagerTitleStrip: void setTextSpacing(int)
+android.support.v4.view.PagerTitleStrip: int getTextSpacing()
+android.support.v4.view.PagerTitleStrip: void setNonPrimaryAlpha(float)
+android.support.v4.view.PagerTitleStrip: void setTextColor(int)
+android.support.v4.view.PagerTitleStrip: void setGravity(int)
+android.support.v4.view.PagerTitleStrip: int getMinHeight()
+android.support.v4.view.ViewPager
+android.support.v4.view.ViewPager: ViewPager(android.content.Context)
+android.support.v4.view.ViewPager: ViewPager(android.content.Context,android.util.AttributeSet)
+android.support.v4.view.ViewPager: void setScrollState(int)
+android.support.v4.view.ViewPager: void setAdapter(android.support.v4.view.PagerAdapter)
+android.support.v4.view.ViewPager: android.support.v4.view.PagerAdapter getAdapter()
+android.support.v4.view.ViewPager: void setOnAdapterChangeListener(android.support.v4.view.ViewPager$OnAdapterChangeListener)
+android.support.v4.view.ViewPager: int getClientWidth()
+android.support.v4.view.ViewPager: void setCurrentItem(int)
+android.support.v4.view.ViewPager: int getCurrentItem()
+android.support.v4.view.ViewPager: void setOnPageChangeListener(android.support.v4.view.ViewPager$OnPageChangeListener)
+android.support.v4.view.ViewPager: void setChildrenDrawingOrderEnabledCompat(boolean)
+android.support.v4.view.ViewPager: int getOffscreenPageLimit()
+android.support.v4.view.ViewPager: void setOffscreenPageLimit(int)
+android.support.v4.view.ViewPager: void setPageMargin(int)
+android.support.v4.view.ViewPager: int getPageMargin()
+android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
+android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
+android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
+android.support.v4.view.ViewPager$SavedState
+android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.DrawerLayout: void setScrimColor(int)
+android.support.v4.widget.DrawerLayout: void setDrawerListener(android.support.v4.widget.DrawerLayout$DrawerListener)
+android.support.v4.widget.DrawerLayout: void setDrawerLockMode(int)
+android.support.v4.widget.DrawerLayout$SavedState
+android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
+android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
+android.support.v4.widget.SlidingPaneLayout: void setSliderFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getSliderFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setCoveredFadeColor(int)
+android.support.v4.widget.SlidingPaneLayout: int getCoveredFadeColor()
+android.support.v4.widget.SlidingPaneLayout: void setPanelSlideListener(android.support.v4.widget.SlidingPaneLayout$PanelSlideListener)
+android.support.v4.widget.SlidingPaneLayout: void setShadowDrawable(android.graphics.drawable.Drawable)
+android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
+android.support.v4.widget.SlidingPaneLayout$SavedState
+android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
+com.baidu.location.Jni
+com.baidu.location.Jni: java.lang.String a(byte[],int)
+com.baidu.location.Jni: java.lang.String b(double,double,int,int)
+com.baidu.mapapi.map.MapView: com.baidu.mapapi.map.BaiduMap getMap()
+com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode: com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode[] values()
+com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode: com.baidu.mapapi.map.MapViewLayoutParams$ELayoutMode valueOf(java.lang.String)
+com.baidu.mapapi.map.MyLocationConfigeration$LocationMode: com.baidu.mapapi.map.MyLocationConfigeration$LocationMode[] values()
+com.baidu.mapapi.map.MyLocationConfigeration$LocationMode: com.baidu.mapapi.map.MyLocationConfigeration$LocationMode valueOf(java.lang.String)
+com.baidu.mapapi.map.SupportMapFragment
+com.baidu.mapapi.map.SupportMapFragment: SupportMapFragment()
+com.baidu.mapapi.map.SupportMapFragment: SupportMapFragment(com.baidu.mapapi.map.BaiduMapOptions)
+com.baidu.mapapi.search.core.PoiInfo$POITYPE: com.baidu.mapapi.search.core.PoiInfo$POITYPE[] values()
+com.baidu.mapapi.search.core.PoiInfo$POITYPE: com.baidu.mapapi.search.core.PoiInfo$POITYPE valueOf(java.lang.String)
+com.baidu.mapapi.search.core.SearchResult$ERRORNO: com.baidu.mapapi.search.core.SearchResult$ERRORNO[] values()
+com.baidu.mapapi.search.core.SearchResult$ERRORNO: com.baidu.mapapi.search.core.SearchResult$ERRORNO valueOf(java.lang.String)
+com.baidu.mapapi.search.route.DrivingRoutePlanOption$DrivingPolicy: com.baidu.mapapi.search.route.DrivingRoutePlanOption$DrivingPolicy[] values()
+com.baidu.mapapi.search.route.DrivingRoutePlanOption$DrivingPolicy: com.baidu.mapapi.search.route.DrivingRoutePlanOption$DrivingPolicy valueOf(java.lang.String)
+com.baidu.mapapi.search.route.TransitRouteLine$TransitStep$TransitRouteStepType: com.baidu.mapapi.search.route.TransitRouteLine$TransitStep$TransitRouteStepType[] values()
+com.baidu.mapapi.search.route.TransitRouteLine$TransitStep$TransitRouteStepType: com.baidu.mapapi.search.route.TransitRouteLine$TransitStep$TransitRouteStepType valueOf(java.lang.String)
+com.baidu.mapapi.search.route.TransitRoutePlanOption$TransitPolicy: com.baidu.mapapi.search.route.TransitRoutePlanOption$TransitPolicy[] values()
+com.baidu.mapapi.search.route.TransitRoutePlanOption$TransitPolicy: com.baidu.mapapi.search.route.TransitRoutePlanOption$TransitPolicy valueOf(java.lang.String)
+com.baidu.mapapi.utils.CoordinateConverter$CoordType: com.baidu.mapapi.utils.CoordinateConverter$CoordType[] values()
+com.baidu.mapapi.utils.CoordinateConverter$CoordType: com.baidu.mapapi.utils.CoordinateConverter$CoordType valueOf(java.lang.String)
+com.baidu.platform.comapi.map.MapRenderer
+com.baidu.platform.comapi.map.MapRenderer: void nativeInit(int)
+com.baidu.platform.comapi.map.MapRenderer: void nativeResize(int,int,int)
+com.baidu.platform.comapi.map.MapRenderer: int nativeRender(int)
+com.baidu.platform.comapi.map.d: com.baidu.platform.comapi.map.d[] values()
+com.baidu.platform.comapi.map.d: com.baidu.platform.comapi.map.d valueOf(java.lang.String)
+com.baidu.platform.comapi.map.s: com.baidu.platform.comapi.map.s[] values()
+com.baidu.platform.comapi.map.s: com.baidu.platform.comapi.map.s valueOf(java.lang.String)
+com.baidu.platform.comjni.base.networkdetect.JNINetworkDetect
+com.baidu.platform.comjni.base.networkdetect.JNINetworkDetect: int Create()
+com.baidu.platform.comjni.base.userdatacollect.JNIUserdataCollect
+com.baidu.platform.comjni.base.userdatacollect.JNIUserdataCollect: int Create()
+com.baidu.platform.comjni.base.userdatacollect.JNIUserdataCollect: int Release(int)
+com.baidu.platform.comjni.base.userdatacollect.JNIUserdataCollect: boolean CreateUDC(int,java.lang.String,android.os.Bundle)
+com.baidu.platform.comjni.base.userdatacollect.JNIUserdataCollect: void AppendRecord(int,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.base.userdatacollect.JNIUserdataCollect: void Save(int)
+com.baidu.platform.comjni.engine.JNIEngine
+com.baidu.platform.comjni.engine.JNIEngine: int initClass(java.lang.Object,int)
+com.baidu.platform.comjni.engine.JNIEngine: boolean InitEngine(android.content.Context,android.os.Bundle)
+com.baidu.platform.comjni.engine.JNIEngine: boolean UnInitEngine()
+com.baidu.platform.comjni.engine.JNIEngine: void SetProxyInfo(java.lang.String,int)
+com.baidu.platform.comjni.engine.JNIEngine: boolean StartSocketProc()
+com.baidu.platform.comjni.map.basemap.JNIBaseMap
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int Create()
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int SetCallback(int,com.baidu.platform.comjni.map.basemap.BaseMapCallback)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int Release(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean Init(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,int,int,int,int,int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void OnPause(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void OnResume(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ResetImageRes(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void SetMapStatus(int,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int SetMapControlMode(int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: android.os.Bundle GetMapStatus(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: float GetZoomToBound(int,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowSatelliteMap(int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowTrafficMap(int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ShowLayers(int,int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int AddLayer(int,int,int,java.lang.String)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void ClearLayer(int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String GetNearlyObjID(int,int,int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String ScrPtToGeoPoint(int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String GeoPtToScrPoint(int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void SaveScreenToLocal(int,java.lang.String)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordAdd(int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordStart(int,int,boolean,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordSuspend(int,int,boolean,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordRemove(int,int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnRecordGetAll(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnRecordGetAt(int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean OnRecordImport(int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnHotcityGet(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: java.lang.String OnSchcityGet(int,java.lang.String)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void addOneOverlayItem(int,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void updateOneOverlayItem(int,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void removeOneOverlayItem(int,android.os.Bundle)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void PostStatInfo(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int MapProc(int,int,int,int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int CreateDuplicate(int)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: int[] GetScreenBuf(int,int[])
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: void enableDrawHouseHeight(int,boolean)
+com.baidu.platform.comjni.map.basemap.JNIBaseMap: boolean isDrawHouseHeightEnable(int)
+com.baidu.platform.comjni.map.cloud.JniCloud
+com.baidu.platform.comjni.map.cloud.JniCloud: int create()
+com.baidu.platform.comjni.map.cloud.JniCloud: int release(int)
+com.baidu.platform.comjni.map.cloud.JniCloud: java.lang.String getSearchResult(int,int)
+com.baidu.platform.comjni.map.cloud.JniCloud: void cloudSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.map.cloud.JniCloud: void cloudDetailSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache
+com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: int Create()
+com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: int Release(int)
+com.baidu.platform.comjni.map.commonmemcache.JNICommonMemCache: void Init(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch
+com.baidu.platform.comjni.map.search.JNISearch: int Create()
+com.baidu.platform.comjni.map.search.JNISearch: int Release(int)
+com.baidu.platform.comjni.map.search.JNISearch: java.lang.String GetSearchResult(int,int)
+com.baidu.platform.comjni.map.search.JNISearch: boolean ForceSearchByCityName(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean AreaSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByBus(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByCar(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean RoutePlanByFoot(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean POIDetailSearchPlace(int,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean BusLineDetailSearch(int,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean SuggestionSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.map.search.JNISearch: boolean ReverseGeocodeSearch(int,int,int)
+com.baidu.platform.comjni.map.search.JNISearch: boolean geocode(int,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean PoiRGCShareUrlSearch(int,int,int,java.lang.String,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean PoiDetailShareUrlSearch(int,java.lang.String)
+com.baidu.platform.comjni.map.search.JNISearch: boolean MapBoundSearch(int,android.os.Bundle)
+com.baidu.platform.comjni.tools.JNITools
+com.baidu.platform.comjni.tools.JNITools: boolean TransGeoStr2Pt(java.lang.Object)
+com.baidu.platform.comjni.tools.JNITools: void TransNodeStr2Pt(java.lang.Object)
+com.baidu.platform.comjni.tools.JNITools: boolean TransGeoStr2ComplexPt(java.lang.Object)
+com.baidu.platform.comjni.tools.JNITools: void GetDistanceByMC(java.lang.Object)
+com.baidu.platform.comjni.tools.JNITools: boolean CoordinateEncryptEx(float,float,java.lang.String,java.lang.Object)
+com.baidu.platform.comjni.tools.ParcelItem
+com.baidu.platform.comjni.tools.ParcelItem: android.os.Parcelable$Creator a
+com.baidu.vi.VDeviceAPI
+com.baidu.vi.VDeviceAPI: void onNetworkStateChanged()
+com.baidu.vi.VMsg
+com.baidu.vi.VMsg: void OnUserCommand1(int,int,int,int)
+w.g.R$array: int categories
+w.g.R$color: int black
+w.g.R$color: int blue
+w.g.R$color: int category_item_title_selector
+w.g.R$color: int cold_gray
+w.g.R$color: int gray
+w.g.R$color: int green
+w.g.R$color: int seagreen
+w.g.R$dimen: int activity_horizontal_margin
+w.g.R$dimen: int activity_vertical_margin
+w.g.R$dimen: int main_menu_textsize
+w.g.R$drawable: int a
+w.g.R$drawable: int bg_1
+w.g.R$drawable: int bg_2
+w.g.R$drawable: int bg_3
+w.g.R$drawable: int bg_4
+w.g.R$drawable: int bg_5
+w.g.R$drawable: int bottom_bar
+w.g.R$drawable: int button_down
+w.g.R$drawable: int button_on
+w.g.R$drawable: int button_style
+w.g.R$drawable: int categorybar_item_background
+w.g.R$drawable: int dot_bg
+w.g.R$drawable: int item_bg
+w.g.R$drawable: int item_shape
+w.g.R$drawable: int level_page_indicator
+w.g.R$drawable: int level_page_indicator_selected
+w.g.R$drawable: int next_
+w.g.R$drawable: int next_down_
+w.g.R$drawable: int popup
+w.g.R$drawable: int popup_down
+w.g.R$drawable: int popup_left
+w.g.R$drawable: int popup_middle
+w.g.R$drawable: int popup_right
+w.g.R$drawable: int popup_side
+w.g.R$drawable: int pre_
+w.g.R$drawable: int pre_down_
+w.g.R$drawable: int spyonyou
+w.g.R$drawable: int tab_address_normal
+w.g.R$drawable: int tab_address_pressed
+w.g.R$drawable: int tab_bg
+w.g.R$drawable: int tab_find_frd_normal
+w.g.R$drawable: int tab_find_frd_pressed
+w.g.R$drawable: int tab_settings_normal
+w.g.R$drawable: int tab_settings_pressed
+w.g.R$drawable: int tab_weixin_normal
+w.g.R$drawable: int tab_weixin_pressed
+w.g.R$id: int acc
+w.g.R$id: int acc_value
+w.g.R$id: int action_settings
+w.g.R$id: int active_time
+w.g.R$id: int active_time_text
+w.g.R$id: int alt
+w.g.R$id: int alt_value
+w.g.R$id: int bearing
+w.g.R$id: int bearing_value
+w.g.R$id: int bmapView
+w.g.R$id: int browser
+w.g.R$id: int button
+w.g.R$id: int button1
+w.g.R$id: int button10
+w.g.R$id: int button11
+w.g.R$id: int button12
+w.g.R$id: int button13
+w.g.R$id: int button14
+w.g.R$id: int button15
+w.g.R$id: int button16
+w.g.R$id: int button17
+w.g.R$id: int button18
+w.g.R$id: int button19
+w.g.R$id: int button2
+w.g.R$id: int button20
+w.g.R$id: int button21
+w.g.R$id: int button22
+w.g.R$id: int button23
+w.g.R$id: int button24
+w.g.R$id: int button25
+w.g.R$id: int button26
+w.g.R$id: int button27
+w.g.R$id: int button28
+w.g.R$id: int button29
+w.g.R$id: int button3
+w.g.R$id: int button30
+w.g.R$id: int button31
+w.g.R$id: int button32
+w.g.R$id: int button4
+w.g.R$id: int button5
+w.g.R$id: int button6
+w.g.R$id: int button7
+w.g.R$id: int button8
+w.g.R$id: int button9
+w.g.R$id: int category_arrow_right
+w.g.R$id: int category_layout
+w.g.R$id: int category_scrollview
+w.g.R$id: int category_title
+w.g.R$id: int categorybar_layout
+w.g.R$id: int chronometer
+w.g.R$id: int city
+w.g.R$id: int comment_content
+w.g.R$id: int comment_ptime
+w.g.R$id: int commentator_from
+w.g.R$id: int comments_layout
+w.g.R$id: int comments_list
+w.g.R$id: int comments_reply_frame
+w.g.R$id: int comments_titlebar_count
+w.g.R$id: int comments_titlebar_layout
+w.g.R$id: int comments_titlebar_news
+w.g.R$id: int comments_titlebar_progressbar
+w.g.R$id: int comments_titlebar_title
+w.g.R$id: int cursor
+w.g.R$id: int dotGroupButton
+w.g.R$id: int editText
+w.g.R$id: int f_button1
+w.g.R$id: int gpstime
+w.g.R$id: int gpstime_value
+w.g.R$id: int gridView1
+w.g.R$id: int img_address
+w.g.R$id: int img_friends
+w.g.R$id: int img_settings
+w.g.R$id: int img_tab_now
+w.g.R$id: int img_weixin
+w.g.R$id: int input
+w.g.R$id: int input_value
+w.g.R$id: int lat
+w.g.R$id: int lat_value
+w.g.R$id: int linearLayout1
+w.g.R$id: int listView1
+w.g.R$id: int loadmore_btn
+w.g.R$id: int loadmore_layout
+w.g.R$id: int loadmore_progress
+w.g.R$id: int loadmore_txt
+w.g.R$id: int loadnews_progress
+w.g.R$id: int lon
+w.g.R$id: int lon_value
+w.g.R$id: int main_bottom
+w.g.R$id: int main_layout
+w.g.R$id: int mainweixin
+w.g.R$id: int max_v
+w.g.R$id: int max_v_value
+w.g.R$id: int menu_settings
+w.g.R$id: int news_body_details
+w.g.R$id: int news_body_details_loading
+w.g.R$id: int news_body_flipper
+w.g.R$id: int news_body_layout
+w.g.R$id: int news_body_ptime_source
+w.g.R$id: int news_body_scrollview
+w.g.R$id: int news_body_separator_line
+w.g.R$id: int news_body_title
+w.g.R$id: int news_collect_btn
+w.g.R$id: int news_reply_edit_layout
+w.g.R$id: int news_reply_edittext
+w.g.R$id: int news_reply_img_btn
+w.g.R$id: int news_reply_img_layout
+w.g.R$id: int news_reply_layout
+w.g.R$id: int news_reply_post
+w.g.R$id: int news_share_btn
+w.g.R$id: int newsdetails_layout
+w.g.R$id: int newsdetails_titlebar_comments
+w.g.R$id: int newsdetails_titlebar_layout
+w.g.R$id: int newsdetails_titlebar_next
+w.g.R$id: int newsdetails_titlebar_previous
+w.g.R$id: int newsdetails_titlebar_title
+w.g.R$id: int newslist
+w.g.R$id: int newslist_item_digest
+w.g.R$id: int newslist_item_go_detail
+w.g.R$id: int newslist_item_info_layout
+w.g.R$id: int newslist_item_layout
+w.g.R$id: int newslist_item_ptime
+w.g.R$id: int newslist_item_source
+w.g.R$id: int newslist_item_title
+w.g.R$id: int next
+w.g.R$id: int nextline
+w.g.R$id: int popdown
+w.g.R$id: int popinfo
+w.g.R$id: int popleft
+w.g.R$id: int popright
+w.g.R$id: int pre
+w.g.R$id: int provider_value
+w.g.R$id: int queried_times
+w.g.R$id: int queried_times_text
+w.g.R$id: int query_times
+w.g.R$id: int query_times_text
+w.g.R$id: int reset_times
+w.g.R$id: int reset_times_text
+w.g.R$id: int reseted_times
+w.g.R$id: int reseted_times_text
+w.g.R$id: int result
+w.g.R$id: int result_value
+w.g.R$id: int scrollView1
+w.g.R$id: int search
+w.g.R$id: int searchkey
+w.g.R$id: int speed
+w.g.R$id: int speed_value
+w.g.R$id: int start_button
+w.g.R$id: int status
+w.g.R$id: int tabpager
+w.g.R$id: int text1
+w.g.R$id: int text2
+w.g.R$id: int text3
+w.g.R$id: int textView0
+w.g.R$id: int textView1
+w.g.R$id: int textView2
+w.g.R$id: int textView3
+w.g.R$id: int textView4
+w.g.R$id: int textView5
+w.g.R$id: int textView6
+w.g.R$id: int textView7
+w.g.R$id: int textView8
+w.g.R$id: int textView9
+w.g.R$id: int textcache
+w.g.R$id: int timer_reset
+w.g.R$id: int timer_start
+w.g.R$id: int timer_stop
+w.g.R$id: int titlebar_layout
+w.g.R$id: int titlebar_refresh
+w.g.R$id: int titlebar_title
+w.g.R$id: int user_type
+w.g.R$id: int user_type_text
+w.g.R$id: int vPager
+w.g.R$id: int viewPagers
+w.g.R$layout: int activity_battery
+w.g.R$layout: int activity_browser
+w.g.R$layout: int activity_browserhtml5
+w.g.R$layout: int activity_busline
+w.g.R$layout: int activity_gps
+w.g.R$layout: int activity_gridview
+w.g.R$layout: int activity_input
+w.g.R$layout: int activity_main
+w.g.R$layout: int activity_menutab
+w.g.R$layout: int activity_notification
+w.g.R$layout: int activity_redbag
+w.g.R$layout: int activity_setting
+w.g.R$layout: int activity_tab
+w.g.R$layout: int activity_timer
+w.g.R$layout: int activity_uppercase
+w.g.R$layout: int activity_view
+w.g.R$layout: int activity_viewpage
+w.g.R$layout: int button
+w.g.R$layout: int button1
+w.g.R$layout: int category_title
+w.g.R$layout: int custom_text_view
+w.g.R$layout: int list_view
+w.g.R$layout: int pager_item
+w.g.R$layout: int security_list_view
+w.g.R$layout: int tab_lay1
+w.g.R$layout: int tab_lay2
+w.g.R$layout: int tab_lay3
+w.g.R$menu: int a
+w.g.R$menu: int activity_main
+w.g.R$menu: int main
+w.g.R$string: int action_settings
+w.g.R$string: int app_name
+w.g.R$string: int c
+w.g.R$string: int ce
+w.g.R$string: int commit
+w.g.R$string: int company
+w.g.R$string: int div
+w.g.R$string: int dot
+w.g.R$string: int edit
+w.g.R$string: int eight
+w.g.R$string: int equal
+w.g.R$string: int five
+w.g.R$string: int four
+w.g.R$string: int hello_world
+w.g.R$string: int help
+w.g.R$string: int hint
+w.g.R$string: int info
+w.g.R$string: int left
+w.g.R$string: int mc
+w.g.R$string: int menu_settings
+w.g.R$string: int minus
+w.g.R$string: int mminus
+w.g.R$string: int mplus
+w.g.R$string: int mr
+w.g.R$string: int ms
+w.g.R$string: int multiply
+w.g.R$string: int nine
+w.g.R$string: int one
+w.g.R$string: int other
+w.g.R$string: int percent
+w.g.R$string: int plus
+w.g.R$string: int pm
+w.g.R$string: int redbag
+w.g.R$string: int redbag_service
+w.g.R$string: int seven
+w.g.R$string: int six
+w.g.R$string: int three
+w.g.R$string: int two
+w.g.R$string: int view
+w.g.R$string: int x
+w.g.R$string: int yes
+w.g.R$string: int zero
+w.g.R$style: int AppBaseTheme
+w.g.R$style: int AppTheme
+w.g.R$xml: int redbag_service_config
+w.g.activity.BatteryActivity
+w.g.activity.BatteryActivity: BatteryActivity()
+w.g.activity.BrowserActivity
+w.g.activity.BrowserActivity: BrowserActivity()
+w.g.activity.BrowserCMCCActivity
+w.g.activity.BrowserCMCCActivity: BrowserCMCCActivity()
+w.g.activity.BrowserHTML5Activity
+w.g.activity.BrowserHTML5Activity: BrowserHTML5Activity()
+w.g.activity.BusLineSearchActivity
+w.g.activity.BusLineSearchActivity: BusLineSearchActivity()
+w.g.activity.BusLineSearchActivity: void searchButtonProcess(android.view.View)
+w.g.activity.BusLineSearchActivity: void SearchNextBusline(android.view.View)
+w.g.activity.BusLineSearchActivity: void nodeClick(android.view.View)
+w.g.activity.DemoApplication
+w.g.activity.DemoApplication: DemoApplication()
+w.g.activity.GpsActivity
+w.g.activity.GpsActivity: GpsActivity()
+w.g.activity.GridViewActivity
+w.g.activity.GridViewActivity: GridViewActivity()
+w.g.activity.InputActivity
+w.g.activity.InputActivity: InputActivity()
+w.g.activity.MainActivity
+w.g.activity.MainActivity: MainActivity()
+w.g.activity.MainActivity: void onClick(android.view.View)
+w.g.activity.MenuTabActivity
+w.g.activity.MenuTabActivity: MenuTabActivity()
+w.g.activity.NotificationActivity
+w.g.activity.NotificationActivity: NotificationActivity()
+w.g.activity.RedBagActivity
+w.g.activity.RedBagActivity: RedBagActivity()
+w.g.activity.SettingActivity
+w.g.activity.SettingActivity: SettingActivity()
+w.g.activity.TabActivity
+w.g.activity.TabActivity: TabActivity()
+w.g.activity.TimerActivity
+w.g.activity.TimerActivity: TimerActivity()
+w.g.activity.UpperCaseActivity
+w.g.activity.UpperCaseActivity: UpperCaseActivity()
+w.g.activity.UpperCaseActivity: void onClick(android.view.View)
+w.g.activity.ViewActivity
+w.g.activity.ViewActivity: ViewActivity()
+w.g.activity.ViewPageActivity
+w.g.activity.ViewPageActivity: ViewPageActivity()
+w.g.receiver.GetSMSCodeReceiver
+w.g.receiver.GetSMSCodeReceiver: GetSMSCodeReceiver()
+w.g.receiver.NetworkConnectReceiver
+w.g.receiver.NetworkConnectReceiver: NetworkConnectReceiver()
+w.g.receiver.PowerOffReceiver
+w.g.receiver.PowerOffReceiver: PowerOffReceiver()
+w.g.service.RedBagService
+w.g.service.RedBagService: RedBagService()
+w.g.service.StartOnBootService
+w.g.service.StartOnBootService: StartOnBootService()

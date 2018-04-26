@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Station Result</title>
+<!--jquery.mobile  -->
+<link rel="stylesheet" href="jquery.mobile-1.4.3.css">
+<link rel="stylesheet" href="css/travel.css">
+<script src="jquery-1.11.1.js"></script>
+<script src="jquery.mobile-1.4.3.js"></script>
+<script src="js/travel_common.js" charset="utf-8"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var param = getParamFromAddress("bus_id")
+		if (param != null && param.toString().length > 1) {
+			travel_common.getLineDetail(param);
+		}
+
+	})
+</script>
+</head>
+<body>
+	<!-- 详细界面 -->
+	<div data-role="page" id="stationResult">
+		<div data-role="header">
+			<h1>查询结果</h1>
+		</div>
+		<div data-role="content">
+			<div class="control-class">
+				<a data-role="button" onclick="refreshLineDetail()"
+					data-icon="refresh" data-iconpos="notext"></a> <a
+					data-role="button" onclick="travel_common.setHeight()"
+					data-icon="arrow-d" data-iconpos="notext"></a> <a
+					data-role="button" onclick="travel_common.toTop()"
+					data-icon="arrow-u" data-iconpos="notext"></a>
+			</div>
+			<span id="bus_id_in_result" class="invisible"></span>
+			<div class="ui-grid-a">
+				<ul data-role="listview" id="station_list">
+					<li data-role="list-divider">详细信息</li>
+					<li class="invisible"><span id="SName"></span><span
+						class="float-right"><span id="InTime"></span><span
+							id="BusInfo"></span></span></li>
+					<li><span>目的地:</span> <span id="LDirection"></span></li>
+					<li><span>运行时间:</span><span id="FETime"></span></li>
+					<li><span>路线:</span> <span id="lName"></span></li>
+					<li data-role="list-divider">站台</li>
+				</ul>
+			</div>
+			<a href="#" onClick="javascript:history.back();" data-inline="true"
+				data-role="button" data-icon="back">返回</a>
+		</div>
+		<div data-role="footer">
+			<h1>仅供测试</h1>
+		</div>
+	</div>
+	10-05
+	<a href="javascript:" class="btn72"
+		onclick="checkG1234('MjAxNC0xMC0wNSMwMCNLODQ1NyMwODowOSMyMDo1MyM0ODAwMEs4NDU3RDAjWENII1NaSCMwNTowMiPlvpDlt54j6IuP5beeIzAxIzEyIzEwMDc4MDMzNzI0MDIyMzAwMDAwMTAwNzgwMDAwMDMwMTQ0MDAwMDAjSDMjMTQxMDk0MDM2NDQ2OSNERTFGMEI3Q0EzMjk5NzY5RUM4NTVGMTBDRkIzQkRFRUI3RTIxRUNDNDdDMzJDOEM2ODcyQjA4NA%3D%3D','20:53','48000K8457D0','XCH','SZH')">预订</a>
+	10-04
+	<a href="javascript:" class="btn72"
+		onclick="checkG1234('MjAxNC0xMC0wNCMwMCNLODQ1NyMwODowOSMyMDo1MyM0ODAwMEs4NDU3RDAjWENII1NaSCMwNTowMiPlvpDlt54j6IuP5beeIzAxIzEyIzEwMDAwMDM0NjI0MDAwMDAwMDAwMTAwMDAwMDAwMTMwMDAwMDAwMDAjSDMjMTQxMDk0MDQxMzM4NiNEQzIwRDY4REM2QzgwOUI0QTExOUVEMzUyNkFBMzBBMUIzQzg5RjgyNEE3NDkxOTk2RTY4QTk4Nw%3D%3D','20:53','48000K8457D0','XCH','SZH')">预订</a>
+	10-03
+	<a href="javascript:" class="btn72"
+		onclick="checkG1234('MjAxNC0xMC0wMyMwMCNLODQ1NyMwODowOSMyMDo1MyM0ODAwMEs4NDU3RDAjWENII1NaSCMwNTowMiPlvpDlt54j6IuP5beeIzAxIzEyIzEwMDAwMDM0OTI0MDAwMDAwMDA0MzAwMDAwMDAwMDEwMDAwMDAyNTMjSDMjMTQxMDk0MDQ0MzMzNiMwM0RGMDNGNEJCMUMwMDU1RDdBRTQ1QUNCNzlCQTU5MjZGNUVBNzgyOTc1MTBEOENBNDgxN0IxMg%3D%3D','20:53','48000K8457D0','XCH','SZH')">预订</a>
+</body>
+</html>

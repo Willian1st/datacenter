@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head class="no-skrollr">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no">
+<title>演示：视差滚动效果</title>
+<link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+	<div id="bg1" data-0="background-position:0px 0px;"
+		data-end="background-position:-500px -10000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;"
+		data-end="background-position:-500px -8000px;"></div>
+	<div id="bg3" data-0="background-position:0px 0px;"
+		data-end="background-position:-500px -6000px;"></div>
+
+	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);"
+		data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+
+	<div id="intro"
+		data-0="opacity:1;top:3%;transform:rotate(0deg);transform-origin:0 0;"
+		data-500="opacity:0;top:-10%;transform:rotate(-90deg);">
+		<h1>视差滚动</h1>
+
+		<h2>向下滚动/滑动查看效果</h2>
+		<p class="arrows">▼</p>
+	</div>
+
+	<div id="transform" data-500="transform:scale(0) rotate(0deg);"
+		data-1000="transform:scale(1) rotate(1440deg);opacity:1;" data-1600=""
+		data-1700="transform:scale(5) rotate(3240deg);opacity:0;">
+		<h2>变形转换</h2>
+		<p>任意元素的比例、倾斜、角度变换。</p>
+	</div>
+
+	<div id="properties" data-1700="top:100%;" data-2200="top:0%;"
+		data-3000="display:block;" data-3500="top:-100%;display:none;">
+		<h2>各种属性值设置</h2>
+		<p>宽度、高度、间距、字体大小...</p>
+		<br />
+	</div>
+
+
+	<div id="end"
+		data-3500="top[cubic]:100%;border-radius[cubic]:0em;background:rgb(0,50,100);border-width:0px;"
+		data-4000="top:10%;border-radius:2em;background:rgb(190,230,255);border-width:6px;">
+		<h2>The End</h2>
+		<h1>测试结束</h1>
+	</div>
+
+	<script src="js/skrollr.min.js"></script>
+	<!--[if lt IE 9]><script type="text/javascript" src="js/skrollr.ie.min.js"></script><![endif]-->
+	<script>
+		var s = skrollr.init({
+			//edgeStrategy: 'set',
+			easing : {
+				WTF : Math.random,
+				inverted : function(p) {
+					return 1 - p;
+				}
+			}
+		});
+	</script>
+
+
+</body>
+</html>

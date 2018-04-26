@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="w.g"
+    android:versionCode="5"
+    android:versionName="20160125" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="23" />
+    <!-- GPS start -->
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- GPS end -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DEVICE_POWER"/>
+    <!-- Map start -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- Map end -->
+    <!-- 通知 start -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 通知 end -->
+    <!-- SMS start -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- SMS end -->
+    <!-- Boot start -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Boot end -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+
+    <application
+        android:name="w.g.activity.DemoApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/spyonyou"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="w.g.activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="tIBpPbVfOBaYfTYW7F6aklLC" />
+
+        <activity android:name="w.g.activity.ViewActivity" />
+        <activity android:name="w.g.activity.BatteryActivity" />
+        <activity android:name="w.g.activity.TimerActivity" />
+        <activity android:name="w.g.activity.GridViewActivity" />
+        <activity android:name="w.g.activity.InputActivity" />
+        <activity android:name="w.g.activity.GpsActivity" />
+        <activity android:name="w.g.activity.UpperCaseActivity" />
+        <activity android:name="w.g.activity.BrowserActivity" />
+        <activity android:name="w.g.activity.BrowserCMCCActivity" />
+        <activity android:name="w.g.activity.BrowserHTML5Activity" />
+        <activity android:name="w.g.activity.ViewPageActivity" />
+        <activity android:name="w.g.activity.TabActivity" />
+        <activity android:name="w.g.activity.MenuTabActivity" />
+        <activity android:name="w.g.activity.NotificationActivity" />
+        <activity android:name="w.g.activity.BusLineSearchActivity" />
+        <activity android:name="w.g.activity.SettingActivity" />
+        <activity android:name="w.g.activity.RedBagActivity" />
+        <activity android:name="w.g.activity.ManageActivity" />
+        <activity android:name="w.g.activity.MyBrowserActivity" />
+        <!-- 注册Receiver,并且设置优先级 -->
+        <receiver
+            android:name="w.g.receiver.GetSMSCodeReceiver"
+            android:exported="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="w.g.receiver.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="w.g.receiver.PowerOffReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.android.settings.action.REQUEST_POWER_OFF" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <!-- 网络连接 -->
+        <receiver android:name="w.g.receiver.NetworkConnectReceiver" >
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="w.g.service.StartOnBootService" >
+        </service>
+        <service
+            android:name="w.g.service.RedBagService"
+            android:enabled="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+
+                <!-- 辅助功能 -->
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/redbag_service_config" />
+        </service>
+    </application>
+
+</manifest>

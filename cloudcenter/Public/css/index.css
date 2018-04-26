@@ -1,0 +1,25 @@
+/*文章标题*/
+h4 {
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+/*文章内容*/
+.row .content {
+	min-height: 100px;
+	max-height: 100px;
+	overflow: hidden;
+}
+/*文章信息*/
+.row .info {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.center {
+	text-align: center;
+}

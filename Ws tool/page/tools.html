@@ -1,0 +1,50 @@
+<div class="container-fluid">
+	<hr/>
+	<div class="row">
+	  <div class="col-md-12">
+	  	<div class="row">
+		  <div class="col-md-3">
+			<ul class="list-group">
+			  <li class="list-group-item" ng-repeat="file in tools.files|orderBy : 'name'">
+				<button type="button" 
+				url="{{file.url}}" 
+				class="btn btn-xs btn-link" 
+				ng-click="tools.play(file.url)"
+				style="white-space:normal"
+				>
+				{{file.name||file.filename}}
+				</button>
+			  </li>
+			</ul>
+		  </div>
+		  <div class="col-md-7">
+			<form class="form-horizontal">
+			  <div class="form-group">
+				<input type="file" id="fileToPlay" accept="video/*, audio/*" multiple="multiple"/>
+			  </div>
+			  <div class="form-group" style="width: 100%">
+				  <input type="text" class="form-control" placeholder="播放地址" id="addressToPlay"/>
+			  </div>
+			  <div class="form-group">
+				<video class="col-md-12" controls id="PlayFlie">
+					您的浏览器不支持 video 标签。
+				</video>
+				<audio class="col-md-12 hidden" controls id="PlayFlie">
+					您的浏览器不支持 video 标签。
+				</audio>
+			  </div>
+			</form>
+		  </div>
+		  <div class="col-md-2">
+			<div class="list-group">
+			  <button type="button" class="list-group-item">多媒体播放</button>
+			  <button type="button" class="list-group-item">JSON格式化</button>
+			  <button type="button" class="list-group-item">字母大小写</button>
+			  <button type="button" class="list-group-item">时间格式化</button>
+			  <button type="button" class="list-group-item">二维码生成</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>

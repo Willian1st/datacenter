@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="人民币￥(数字):" 
+        android:textSize="20sp"
+        android:paddingTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/input_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="17"
+        android:text=""
+        android:gravity="center"
+        android:textSize="20dp"
+                />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="人民币大写:" 
+        android:textSize="20sp"
+        android:paddingTop="20dp"/>
+
+    <EditText
+        android:id="@+id/result_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="-"
+        android:textSize="20dp" 
+        android:textColor="@color/green"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:gravity="center"
+        android:paddingTop="20dp"
+        >
+
+        
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="转换" 
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

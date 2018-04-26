@@ -1,0 +1,36 @@
+<div class="row">
+	<form class="col-md-12">
+		<div class="row">
+			<div class="col-xs-2">
+				<select id="pictUrlSelect" class="form-control" ng-model="selectedUrl" ng-options="x.name for x in map.previewList"
+					ng-change="map.init(selectedUrl.value)"></select>
+			</div>
+			<div class="col-xs-2">
+				<input class="form-control " type="file" id="nativeUrl" ng-model="nativeUrl" placeholder="图片地址" />
+			</div>
+			<div class="col-xs-3 pull-right">
+				<input type="input" class="form-control" id="internetUrl" ng-model="internetUrl" ng-change="map.init(internetUrl)"
+					ng-click="map.reset()" placeholder="图片地址">
+				<ul id="previewHistory" class="list-unstyled bg-info col-xs-11 previewHistory"
+					style="position: absolute; z-index: 1000; max-height: 250px; overflow-y: auto;" ng-show="!map.showHistory">
+					<li
+						style="cursor: pointer; border-bottom: 1px solid #ddd; padding: 8px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;"
+						class="text-info col-sm-12" ng-repeat="history in previewHistory.slice().reverse() track by $index"><span
+						ng-click="map.removeHistory(history)"><span class="glyphicon glyphicon-trash" aria-hidden="true"> </span> </span><span
+						class="history" ng-click="map.init(history,$event)">{{($index+1)+"."+history}}</span></li>
+				</ul>
+			</div>
+		</div>
+	</form>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div id='map' style="width: 100%; height: 500px;"></div>
+	</div>
+</div>
+<style type="text/css">
+.active {
+	
+}
+</style>
+

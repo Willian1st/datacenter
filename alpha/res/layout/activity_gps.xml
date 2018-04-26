@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前速度:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/speed_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/green"
+                android:textSize="30sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/max_v"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最大速度:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/max_v_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <!--
+        TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="20dp" >
+        </TextView
+            -->
+
+            <TextView
+                android:id="@+id/lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="经度:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/lat_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/lon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="纬度:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/lon_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/alt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="海拔:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/alt_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/bearing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="方位:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/bearing_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/acc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="精确度:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/acc_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/gpstime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS时间:"
+                android:textSize="20sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/gpstime_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/seagreen"
+                android:textSize="25sp"
+                android:textStyle="bold" >
+            </TextView>
+             
+
+            <TextView
+                android:id="@+id/provider_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="-"                
+                android:textColor="@color/green"
+                android:textSize="10sp"
+                android:textStyle="bold" >
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

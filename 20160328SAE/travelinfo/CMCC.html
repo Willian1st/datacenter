@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CMCC</title>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#cmcc").css('height', $(window).height());
+
+		$("#b").bind("click",function(){
+			alert($("#cmcc").html())
+			$("#l").hide()
+		})
+
+		return;
+		$.ajax({
+			type : 'POST',
+			url : 'http://localhost/test.php',
+			data : {
+				hi : 'hi',
+			},
+			dataType : "json",
+			success : function(data) {
+				if (data.result == "success") {
+					$("#cmcc").attr("src", "http://2.travelinfo.sinaapp.com/");
+				}
+			}
+
+		});
+	});
+
+	function setInfo() {
+		$("img").hide()
+		$("#p").val('10');
+	}
+</script>
+<style type="text/css">
+body {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+body #cmcc {
+	border: 0px;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+<button id="b">b</button>
+<label id="l">b</label>
+	<iframe id="cmcc" src="http://www.soso.com" name="cmcc"></iframe>
+
+</body>
+</html>

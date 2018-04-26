@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="spyonyou.png">
+<title>登录</title>
+<!-- Bootstrap 核心样式表 -->
+<link href="../plugins/bootstrap3/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Bootstrap 可选主题样式表 -->
+<link href="../plugins/bootstrap3/css/bootstrap-theme.min.css"
+	rel="stylesheet">
+<!-- 自定义样式表 -->
+<link href="signin.css" rel="stylesheet">
+<!-- HTML5 shim 和 Respond.js 使IE8 支持 HTML5 元素 和 媒体查询 -->
+<!--[if lt IE 9]>
+		  <script src="../plugins/bootstrap3/js/html5shiv.min.js"></script>
+		  <script src="../plugins/bootstrap3/js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body ng-app="loginApp" ng-controller="loginController">
+	<div class="container">
+		<form class="form-signin" role="form">
+			<h2 class="form-signin-heading">欢迎登陆</h2>
+			<input type="email" class="form-control" placeholder="邮箱地址" required
+				autofocus ng-model="loginName"> <input type="password"
+				class="form-control" placeholder="密码" required
+				ng-model="loginPassword">
+			<div class="checkbox">
+				<label> <input type="checkbox" value="remember-me">
+					记住我
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+		</form>
+		{{loginName+loginPassword}}!
+		<p>使用 ng-repeat 来循环数组</p>
+		<ul>
+			<li ng-repeat="x in names" class="aaa">{{ x }}</li>
+		</ul>
+	</div>
+	<!-- /container -->
+	<!-- IE10 视口 hack for Surface/desktop Windows 8 bug -->
+	<script src="../plugins/bootstrap3/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="angular-1.0.1.min.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("loginApp", []);
+		app.controller("loginController", function($scope) {
+			$scope.names = [ 3, 2, 3 ]
+			$scope.loginPassword = 1111
+		});
+	</script>
+</body>
+</html>

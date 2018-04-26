@@ -1,0 +1,84 @@
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../travel/js/easyui/themes/icon.css">
+<link rel="stylesheet"
+	href="../travel/js/easyui/themes/default/easyui.css">
+<script src="../plugins/jquery.js"></script>
+<script src="../travel/js/easyui/jquery.easyui.min.js"></script>
+<script src="../travel/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../travel/js/manage4all.js"></script>
+<style type="text/css">
+.textbox {
+	height: 20px;
+	margin: 0 5px 0 5px;
+	padding: 0 2px;
+	box-sizing: content-box;
+	width: 100px !important;
+}
+
+.line {
+	padding: 2px;
+}
+
+.line label {
+	display: inline-block;
+	width: 55px;
+}
+
+.line .odd {
+	display: inline-block;
+	width: 40px;
+}
+</style>
+<title>控制台(详情)</title>
+</head>
+<body>
+	<div id="data">
+		<table id="user"></table>
+
+		<div id="tb">
+			<div class="easyui-accordion">
+				<div title="操作(单击展开/关闭)" iconCls="icon-add">
+					<div class="line">
+						<a href="#" class="easyui-linkbutton" iconCls="icon-remove"
+							plain="true" onclick="action.del();">删除</a><a href="#"
+							class="easyui-linkbutton" iconCls="icon-add" plain="true"
+							onclick="action.add();">添加</a> <a href="#"
+							class="easyui-linkbutton" iconCls="icon-edit"
+							onclick="action.edit();" plain="true">修改</a> <a href="#"
+							class="easyui-linkbutton" iconCls="icon-save" plain="true"
+							style="display: none;" id="save" onclick="action.save();"> 保
+							存 </a> <a href="#" class="easyui-linkbutton" iconCls="icon-redo"
+							plain="true" style="display: none;" id="redo"
+							onclick="action.redo();">取消编 辑</a>
+					</div>
+				</div>
+				<div title="检索(单击展开/关闭)" iconCls="icon-search">
+					<div class="line">
+						<label>地址:</label><input type="text" name="ip" class="textbox" />
+						<label class="odd">位置:</label><input type="text" name="address"
+							class="textbox" />
+					</div>
+					<div class="line">
+						<label>时间从:</label><input type="text" name="from"
+							class="easyui-datebox" editable="false" /> <label class="odd">到:</label><input
+							type="text" name="to" class="easyui-datebox" editable="false" />
+					</div>
+					<div class="line">
+						<label>设备:</label><input type="text" name="type" class="textbox" />
+						<label class="odd">界面:</label><input type="text" name="site"
+							class="textbox" />
+					</div>
+					<div class="line">
+						<label>UA:</label><input type="text" name="user_agent"
+							class="textbox" /> <a href="#" class="easyui-linkbutton"
+							iconCls="icon-search" onclick="action.search()">查询</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

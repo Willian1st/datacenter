@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CMCC</title>
+<script src="js/jquery-1.6.2.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#cmcc").css('height', $(window).height());
+		var getInfo = $("#form2 tbody tr td a");
+		//填写手机号
+		$("#UserName").val('15195772530');
+		//获取验证码
+		getInfo.trigger("click");
+	});
+
+	function setInfo(code) {
+		if ($("#PassWord").val() == '') {
+			$("#PassWord").val(code);
+			$("#button").submit();
+		}
+	}
+</script>
+<style type="text/css">
+body {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+body #cmcc {
+	border: 0px;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+	<iframe id="cmcc" src="http://2.travelinfo.sinaapp.com/"></iframe>
+</body>
+</html>

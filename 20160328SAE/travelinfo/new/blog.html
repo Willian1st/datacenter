@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="spyonyou.png">
+<title>Blog</title>
+<!-- Bootstrap 核心样式表 -->
+<link href="../plugins/bootstrap3/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Bootstrap 可选主题样式表 -->
+<link href="../plugins/bootstrap3/css/bootstrap-theme.min.css"
+	rel="stylesheet">
+<!-- 自定义样式表 -->
+<link href="css/blog.css" rel="stylesheet">
+<!-- HTML5 shim 和 Respond.js 使IE8 支持 HTML5 元素 和 媒体查询 -->
+<!--[if lt IE 9]>
+	  <script src="../plugins/bootstrap3/js/html5shiv.min.js"></script>
+	  <script src="../plugins/bootstrap3/js/respond.min.js"></script>
+	<![endif]-->
+<!-- Bootstrap 核心 JavaScript
+    ================================================== -->
+<!-- 放在界面底部以使加载更快 -->
+<script src="../plugins/jquery.js"></script>
+<script src="../plugins/bootstrap3/js/bootstrap.min.js"></script>
+<!-- IE10 视口 hack for Surface/desktop Windows 8 bug -->
+<script src="../plugins/bootstrap3/js/ie10-viewport-bug-workaround.js"></script>
+<script src="offcanvas.js"></script>
+<script src="../plugins/bootstrap3/js/docs.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/blog.js"></script>
+</head>
+<body ng-app="blogApp" ng-controller="blogCtrl">
+	<div class="blog-masthead">
+		<div class="container">
+			<nav class="blog-nav">
+				<a class="blog-nav-item active" href="#">首页</a> <a
+					class="blog-nav-item" href="#">新功能</a> <a class="blog-nav-item"
+					href="#">出版</a> <a class="blog-nav-item" href="#">新职位</a> <a
+					class="blog-nav-item" href="#">关于</a>
+			</nav>
+		</div>
+	</div>
+	<div class="container">
+		<div class="blog-header">
+			<h7 class="blog-title">W's Blog
+			<p class="lead blog-description">博客与随笔.</p>
+			</h7>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-8 blog-main">
+				<div class="blog-post">
+					<p class="blog-post-title">{{noteDetail.title}}</p>
+					<p class="blog-post-meta">
+						{{noteDetail.changetime}} by <a href="#about">Willie</a>
+					</p>
+					<hr>
+					<p ng-bind-html="noteDetail.content|html"></p>
+					<hr>
+				</div>
+				<!-- /.blog-post -->
+				<nav>
+					<ul class="pager">
+						<li><a href="#">上一页</a></li>
+						<li><a href="#">下一页</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!-- /.blog-main -->
+
+			<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+				<div class="sidebar-module sidebar-module-inset">
+					<h4 id="about">关于</h4>
+					<p>Teaching & Research...</p>
+				</div>
+				<div class="sidebar-module">
+					<h4>归档</h4>
+					<ol class="list-unstyled">
+						<li><a href="#">3月 2014</a></li>
+						<li><a href="#">2月 2014</a></li>
+						<li><a href="#">1月 2014</a></li>
+						<li><a href="#">12月 2013</a></li>
+						<li><a href="#">11月 2013</a></li>
+						<li><a href="#">10月 2013</a></li>
+						<li><a href="#">9月 2013</a></li>
+						<li><a href="#">8月 2013</a></li>
+						<li><a href="#">7月 2013</a></li>
+						<li><a href="#">6月 2013</a></li>
+						<li><a href="#">5月 2013</a></li>
+						<li><a href="#">4月 2013</a></li>
+					</ol>
+				</div>
+				<div class="sidebar-module">
+					<h4>推荐</h4>
+					<ol class="list-unstyled">
+						<li><a href="#">GitHub</a></li>
+						<li><a href="#">Twitter</a></li>
+						<li><a href="#">Facebook</a></li>
+					</ol>
+				</div>
+			</div>
+			<!-- /.blog-sidebar -->
+		</div>
+		<!-- /.row -->
+	</div>
+	<!-- /.container -->
+	<div class="blog-footer">
+		<p>
+			<a href="#">返回顶部</a>
+		</p>
+	</div>
+</body>
+</html>

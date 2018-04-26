@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">自动领取(测试版)</string>
+    <string name="app_name_wx">自动领取(微信)</string>
+    <string name="app_name_qq">自动领取(QQ)</string>
+    <string name="company">打开辅助功能</string>
+    <string name="redbag">启动红包领取服务</string>
+    <string name="redbag_service">启动红包自动领取</string>
+
+</resources>

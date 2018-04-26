@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6">
+			<button type="button" class="btn btn-primary" plugins-click="hotkeyAdd">新增</button>
+			<button type="button" class="btn btn-primary" plugins-click="hotkeyEdit">修改</button>
+			<button type="button" class="btn btn-primary" plugins-click="hotkeyDelete">移除</button>
+			<table id="table" class="table table-striped table-hover table-bordered">
+				<thead>
+					<tr>
+						<th width="5%"><input id="checkAll" type="checkbox"></th>
+						<th>快捷键</th>
+						<th>触发方式</th>
+						<th>行为</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="options in keys.options|orderBy : 'hotkey'">
+						<td><input type="checkbox" dataid="{{options.hotkey}}"></td>
+						<td>{{options.hotkey}}</td>
+						<td>{{options.hotkeyAction}}</td>
+						<td>{{options.action}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal fade" tabindex="-1" id="modal" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						配置快捷键<a href="javascript: void(0)" class="close close-spin" data-modal-close>&times;</a>
+					</div>
+					<div class="modal-body">
+						<form class="form-inline" role="form">
+							<div class="form-group">
+								<input type="text" class="form-field" ng-model="form.hotkey" placeholder="快捷键">
+							</div>
+							<div class="form-group">
+								<select ng-model="form.hotkeyAction" class="form-control" placeholder="快捷键">
+									<option value="{{option.key}}" ng-repeat="option in hotkeyActions">{{option.value}}</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" ng-model="form.action" placeholder="行为"></textarea>
+							</div>
+							<button type="submit" plugins-click="hotkeySave" class="btn btn-default">保存</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

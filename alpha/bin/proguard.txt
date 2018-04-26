@@ -1,0 +1,99 @@
+# view res/layout/activity_menutab.xml #generated:136
+# view res/layout/activity_tab.xml #generated:52
+# view res/layout/activity_viewpage.xml #generated:7
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/activity_busline.xml #generated:74
+-keep class com.baidu.mapapi.map.SupportMapFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:67
+-keep class w.g.activity.BatteryActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:73
+-keep class w.g.activity.BrowserActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:74
+-keep class w.g.activity.BrowserCMCCActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:75
+-keep class w.g.activity.BrowserHTML5Activity { <init>(...); }
+
+# view AndroidManifest.xml #generated:80
+-keep class w.g.activity.BusLineSearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:46
+-keep class w.g.activity.DemoApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:71
+-keep class w.g.activity.GpsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:69
+-keep class w.g.activity.GridViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:70
+-keep class w.g.activity.InputActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class w.g.activity.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class w.g.activity.ManageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:78
+-keep class w.g.activity.MenuTabActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class w.g.activity.MyBrowserActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:79
+-keep class w.g.activity.NotificationActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:82
+-keep class w.g.activity.RedBagActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class w.g.activity.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:77
+-keep class w.g.activity.TabActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
+-keep class w.g.activity.TimerActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:72
+-keep class w.g.activity.UpperCaseActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:66
+-keep class w.g.activity.ViewActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class w.g.activity.ViewPageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:95
+-keep class w.g.receiver.BootBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:86
+-keep class w.g.receiver.GetSMSCodeReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class w.g.receiver.NetworkConnectReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:102
+-keep class w.g.receiver.PowerOffReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class w.g.service.RedBagService { <init>(...); }
+
+# view AndroidManifest.xml #generated:120
+-keep class w.g.service.StartOnBootService { <init>(...); }
+
+# onClick res/layout/activity_busline.xml #generated:57
+-keepclassmembers class * { *** SearchNextBusline(...); }
+
+# onClick res/layout/activity_busline.xml #generated:100
+# onClick res/layout/activity_busline.xml #generated:90
+-keepclassmembers class * { *** nodeClick(...); }
+
+# onClick res/layout/activity_busline.xml #generated:46
+-keepclassmembers class * { *** searchButtonProcess(...); }
+

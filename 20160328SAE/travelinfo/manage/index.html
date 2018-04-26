@@ -1,0 +1,44 @@
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../travel/js/easyui/themes/icon.css">
+<link rel="stylesheet"
+	href="../travel/js/easyui/themes/default/easyui.css">
+<link rel="stylesheet" href="../travel/js/easyui/themes/icon.css">
+<script src="../plugins/jquery.js"></script>
+<script src="../travel/js/easyui/jquery.easyui.min.js"></script>
+<script src="../travel/js/easyui/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../travel/js/index.js"></script>
+<title>控制台首页</title>
+</head>
+<body>
+	<div id="box" style="width: 600px; height: 400px;">
+		<div
+			data-options="
+		region:'north',
+		title:'导航',
+		border : true,
+		iconCls : 'icon-save',
+		href : 'content.html',
+		collapsible : false,
+		maxHeight : 100,
+	"
+			style="height: 200px;"></div>
+		<div data-options="region:'south',title:'页脚',split : true,"
+			style="height: 100px;"></div>
+		<div data-options="region:'west',title:'功能',"
+			style="width: 100px;">
+			<ol>
+				<li>数据字典</li>
+				<li>数据字典</li>
+				<li>数据字典</li>
+				<li>数据字典</li>
+			</ol>
+		</div>
+		<div data-options="region:'east',title:'内容',split : true,"
+			style="width: 100px;"></div>
+		<div data-options="region:'center',title:'中间'"></div>
+	</div>
+</body>
+</html>

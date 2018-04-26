@@ -1,0 +1,31 @@
+﻿{
+	"manifest_version": 2,
+	"name": "W's",
+	"version": "1.0.1",
+	"description":"alpha",
+	"homepage_url":"http://127.0.0.1:8080",
+	"incognito":"spanning",
+	"background": { "scripts": ["jquery.js","hotkeys.js", "background.js","options.js","angular.min.js"] },
+	"omnibox": { "keyword" : "ws" }, 
+	"options_page": "options.html",
+	"browser_action": {
+		"default_icon": {
+			"16": "icon16.png",
+			"48": "icon48.png",
+			"128": "icon128.png"
+		},
+		"default_title": "W's tool", // shown in tooltip
+		"default_popup": "popup.html"
+	},
+	"permissions" : [
+							"tabs",
+							"*://*/",
+							"notifications",
+							"history",
+							"contextMenus"
+							],
+	"content_scripts":[{
+		"matches":["*://*/*"],
+		"js":["jquery.js","hotkeys.js","layer.js", "content_script.js"]
+	}]
+}

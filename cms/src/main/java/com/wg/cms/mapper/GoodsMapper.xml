@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wg.cms.dao.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="com.wg.cms.bean.Goods" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="originalPrice" property="originalprice" jdbcType="DECIMAL" />
+    <result column="coupon" property="coupon" jdbcType="DECIMAL" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="discountStartTime" property="discountstarttime" jdbcType="VARCHAR" />
+    <result column="discountEndTime" property="discountendtime" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="saleNum" property="salenum" jdbcType="DECIMAL" />
+    <result column="getNum" property="getnum" jdbcType="DECIMAL" />
+    <result column="flag" property="flag" jdbcType="VARCHAR" />
+    <result column="sjgxsj" property="sjgxsj" jdbcType="VARCHAR" />
+    <result column="sjgxr" property="sjgxr" jdbcType="INTEGER" />
+    <result column="sjcjsj" property="sjcjsj" jdbcType="VARCHAR" />
+    <result column="sjcjr" property="sjcjr" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.wg.cms.bean.Goods" extends="BaseResultMap" >
+    <result column="picture" property="picture" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, originalPrice, coupon, price, description, discountStartTime, discountEndTime, 
+    type, saleNum, getNum, flag, sjgxsj, sjgxr, sjcjsj, sjcjr
+  </sql>
+  <sql id="Blob_Column_List" >
+    picture
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.wg.cms.bean.GoodsExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'fasle' as QUERYID,
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from goods
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+    <if test="start != null and length != null">
+		limit #{start},#{length}
+	</if>
+  </select>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.wg.cms.bean.GoodsExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    'fasle' as QUERYID,
+    <include refid="Base_Column_List" />
+    from goods
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from goods
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from goods
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wg.cms.bean.Goods" >
+    insert into goods (id, name, originalPrice, 
+      coupon, price, description, 
+      discountStartTime, discountEndTime, type, 
+      saleNum, getNum, flag, 
+      sjgxsj, sjgxr, sjcjsj, 
+      sjcjr, picture)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{originalprice,jdbcType=DECIMAL}, 
+      #{coupon,jdbcType=DECIMAL}, #{price,jdbcType=DECIMAL}, #{description,jdbcType=VARCHAR}, 
+      #{discountstarttime,jdbcType=VARCHAR}, #{discountendtime,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, 
+      #{salenum,jdbcType=DECIMAL}, #{getnum,jdbcType=DECIMAL}, #{flag,jdbcType=VARCHAR}, 
+      #{sjgxsj,jdbcType=VARCHAR}, #{sjgxr,jdbcType=INTEGER}, #{sjcjsj,jdbcType=VARCHAR}, 
+      #{sjcjr,jdbcType=INTEGER}, #{picture,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wg.cms.bean.Goods" >
+    insert into goods
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="originalprice != null" >
+        originalPrice,
+      </if>
+      <if test="coupon != null" >
+        coupon,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="discountstarttime != null" >
+        discountStartTime,
+      </if>
+      <if test="discountendtime != null" >
+        discountEndTime,
+      </if>
+      <if test="type != null" >
+        type,
+      </if>
+      <if test="salenum != null" >
+        saleNum,
+      </if>
+      <if test="getnum != null" >
+        getNum,
+      </if>
+      <if test="flag != null" >
+        flag,
+      </if>
+      <if test="sjgxsj != null" >
+        sjgxsj,
+      </if>
+      <if test="sjgxr != null" >
+        sjgxr,
+      </if>
+      <if test="sjcjsj != null" >
+        sjcjsj,
+      </if>
+      <if test="sjcjr != null" >
+        sjcjr,
+      </if>
+      <if test="picture != null" >
+        picture,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="originalprice != null" >
+        #{originalprice,jdbcType=DECIMAL},
+      </if>
+      <if test="coupon != null" >
+        #{coupon,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="discountstarttime != null" >
+        #{discountstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="discountendtime != null" >
+        #{discountendtime,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="salenum != null" >
+        #{salenum,jdbcType=DECIMAL},
+      </if>
+      <if test="getnum != null" >
+        #{getnum,jdbcType=DECIMAL},
+      </if>
+      <if test="flag != null" >
+        #{flag,jdbcType=VARCHAR},
+      </if>
+      <if test="sjgxsj != null" >
+        #{sjgxsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sjgxr != null" >
+        #{sjgxr,jdbcType=INTEGER},
+      </if>
+      <if test="sjcjsj != null" >
+        #{sjcjsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcjr != null" >
+        #{sjcjr,jdbcType=INTEGER},
+      </if>
+      <if test="picture != null" >
+        #{picture,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.wg.cms.bean.GoodsExample" resultType="java.lang.Integer" >
+    select count(*) from goods
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wg.cms.bean.Goods" >
+    update goods
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="originalprice != null" >
+        originalPrice = #{originalprice,jdbcType=DECIMAL},
+      </if>
+      <if test="coupon != null" >
+        coupon = #{coupon,jdbcType=DECIMAL},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="discountstarttime != null" >
+        discountStartTime = #{discountstarttime,jdbcType=VARCHAR},
+      </if>
+      <if test="discountendtime != null" >
+        discountEndTime = #{discountendtime,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        type = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="salenum != null" >
+        saleNum = #{salenum,jdbcType=DECIMAL},
+      </if>
+      <if test="getnum != null" >
+        getNum = #{getnum,jdbcType=DECIMAL},
+      </if>
+      <if test="flag != null" >
+        flag = #{flag,jdbcType=VARCHAR},
+      </if>
+      <if test="sjgxsj != null" >
+        sjgxsj = #{sjgxsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sjgxr != null" >
+        sjgxr = #{sjgxr,jdbcType=INTEGER},
+      </if>
+      <if test="sjcjsj != null" >
+        sjcjsj = #{sjcjsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sjcjr != null" >
+        sjcjr = #{sjcjr,jdbcType=INTEGER},
+      </if>
+      <if test="picture != null" >
+        picture = #{picture,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.wg.cms.bean.Goods" >
+    update goods
+    set name = #{name,jdbcType=VARCHAR},
+      originalPrice = #{originalprice,jdbcType=DECIMAL},
+      coupon = #{coupon,jdbcType=DECIMAL},
+      price = #{price,jdbcType=DECIMAL},
+      description = #{description,jdbcType=VARCHAR},
+      discountStartTime = #{discountstarttime,jdbcType=VARCHAR},
+      discountEndTime = #{discountendtime,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      saleNum = #{salenum,jdbcType=DECIMAL},
+      getNum = #{getnum,jdbcType=DECIMAL},
+      flag = #{flag,jdbcType=VARCHAR},
+      sjgxsj = #{sjgxsj,jdbcType=VARCHAR},
+      sjgxr = #{sjgxr,jdbcType=INTEGER},
+      sjcjsj = #{sjcjsj,jdbcType=VARCHAR},
+      sjcjr = #{sjcjr,jdbcType=INTEGER},
+      picture = #{picture,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wg.cms.bean.Goods" >
+    update goods
+    set name = #{name,jdbcType=VARCHAR},
+      originalPrice = #{originalprice,jdbcType=DECIMAL},
+      coupon = #{coupon,jdbcType=DECIMAL},
+      price = #{price,jdbcType=DECIMAL},
+      description = #{description,jdbcType=VARCHAR},
+      discountStartTime = #{discountstarttime,jdbcType=VARCHAR},
+      discountEndTime = #{discountendtime,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+      saleNum = #{salenum,jdbcType=DECIMAL},
+      getNum = #{getnum,jdbcType=DECIMAL},
+      flag = #{flag,jdbcType=VARCHAR},
+      sjgxsj = #{sjgxsj,jdbcType=VARCHAR},
+      sjgxr = #{sjgxr,jdbcType=INTEGER},
+      sjcjsj = #{sjcjsj,jdbcType=VARCHAR},
+      sjcjr = #{sjcjr,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

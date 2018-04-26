@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<include file="Common:header" />
+<title>设备列表</title>
+</head>
+<body ng-app="deviceApp" ng-controller="deviceController" class="center-block">
+  <include file="Common:nav" />
+  <div class="row">
+    <form class="form-horizontal col-md-12" ng-submit="device.search()">
+      <div class="form-group">
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-globe"></span></span> <input
+              ng-model="device.deviceid" type="text" class="form-control" placeholder="设备ID"
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-zoom-in"></span></span> <input
+              ng-model="device.userid" type="text" class="form-control" placeholder="用户识别ID"
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-home"></span></span> <input
+              ng-model="device.sim" type="text" class="form-control" placeholder="SIMID"
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-info-sign"></span></span> <input
+              ng-model="device.agent" type="text" class="form-control" placeholder="标识"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> <input
+              ng-model="device.time" type="date" class="form-control" placeholder="启动时间"
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> <input
+              ng-model="device.flag" type="text" class="form-control" placeholder="状态"
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span> <input
+              ng-model="device.username" type="text" class="form-control" placeholder="用户名"
+            >
+          </div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <div class="col-md-6 col-xs-6">
+            <button class="btn btn-default pull-right" type="button" tilte="切换视图"
+              ng-click="device.switch=!device.switch"
+            >
+              <span class="glyphicon glyphicon-retweet"> 切换视图</span>
+            </button>
+          </div>
+          <div class="col-md-6 col-xs-6">
+            <button class="btn btn-default pull-right" type="submit">
+              <span class="glyphicon glyphicon-search"></span> 检索
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <button style="position: absolute; z-index: 99; right: 10px; top: 60px;" class="btn btn-default pull-right hidden"
+    type="button" tilte="切换视图" ng-click="device.switch=!device.switch"
+  >
+    <span class="glyphicon glyphicon-retweet"> 切换视图</span>
+  </button>
+
+  <div class=container-fluid>
+    <!--列表样式一  -->
+    <div class="row data-list1" ng-hide="device.switch">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th></th>
+                <th>设备ID</th>
+                <th>用户识别ID</th>
+                <th>SIMID</th>
+                <th>启动时间</th>
+                <th>状态</th>
+                <th>用户名</th>
+                <th>检查时间</th>
+              </tr>
+            </thead>
+            <tbody class="data-list">
+              <tr ng-repeat="value in device.data">
+                <td scope="row" ng-bind="value.id"></td>
+                <td ng-bind="value.deviceid"></td>
+                <td ng-bind="value.userid"></td>
+                <td ng-bind="value.sim"></td>
+                <td ng-bind="value.time*1000 | date:'yyyy-MM-dd HH:mm:ss'"></td>
+                <td ng-bind="value.flag"></td>
+                <td ng-bind="value.username"></td>
+                <td ng-bind="value.checktime*1000 | date:'yyyy-MM-dd HH:mm:ss'"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--列表样式二  -->
+    <div class="row data-list3" ng-hide="!device.switch"></div>
+    <div class="row data-list3" ng-hide="!device.switch">
+      <div class="col-sm-4 col-md-3" ng-repeat="value in device.data">
+        <div class="thumbnail">
+          <img src="">
+          <div class="caption">
+            <p class="text-primary">
+              设备ID：<span ng-bind="value.deviceid"></span>
+            </p>
+            <p>
+              用户识别ID： <span ng-bind="value.userid"></span>
+            </p>
+            <p>
+              SIMID：<span ng-bind="value.sim"></span>
+            </p>
+            <p class="text-danger">
+              启动时间：<span ng-bind="value.time*1000 | date:'yyyy-MM-dd hh:mm:ss'"></span>
+            </p>
+            <p>
+            <form onsubmit="updateDevice(this);return false;">
+              <input name="id" type="hidden" value="{{value.id}}" />
+              <div class="form-group">
+                状态： <select class="form-control" name="flag" ng-model="value.flag">
+                  <option value="1">允许</option>
+                  <option value="0">禁止</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="username">用户名</label> <input ng-model="value.username" type="text" class="form-control"
+                  id="username" name="username" placeholder="真实姓名"
+                />
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary" type="submit">设置</button>
+              </div>
+            </form>
+            <p class="text-success">
+              检查时间： <span ng-bind="value.checktime*1000 | date:'yyyy-MM-dd hh:mm:ss'"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="__PUBLIC__/plugins/bootstrap3/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+			var app = angular.module("deviceApp", []);
+			app.controller("deviceController", function($scope) {
+				$scope.device = {
+					init : function() {
+						$scope.device.getList();
+					},
+					switch:true,
+					getList : function() {
+						$.ajax({
+							url : "Device/find",
+							type : "post",
+							data : {},
+							success : function(data) {
+								var list = JSON.parse(data);
+								if (list.rows && list.rows.length > 0) {
+									$scope.$apply(function() {
+										$scope.device.data = list.rows;
+									});
+								}
+							}
+						});
+					}
+				}
+				$scope.device.init();
+			});
+			function updateDevice(obj) {
+				obj = $(obj);
+				$.ajax({
+					url : "Device/update",
+					type : "post",
+					data : obj.serialize(),
+					success : function(data) {
+						var result = JSON.parse(data);
+						var info = "没有修改";
+						if (result == 1) {
+							info = "设置成功";
+						}
+						var d = dialog({
+							content : info,
+							quickClose : true,
+							fixed : true,
+						// 点击空白处快速关闭
+						});
+						d.show();
+						setTimeout(function() {
+							d.close().remove();
+						}, 2000);
+					}
+				});
+			}
+		</script>
+</body>
+</html>

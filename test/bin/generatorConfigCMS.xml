@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
+		<!-- 注释 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
+			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/cms"
+			userId="root" password="root">
+		</jdbcConnection>
+		<javaModelGenerator targetPackage="com.wg.cms.bean" targetProject="test">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.wg.cms.mapper" targetProject="test">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.wg.cms.dao" targetProject="test">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table tableName="setting" domainObjectName="Setting" enableSelectByPrimaryKey="true" enableCountByExample="true"
+			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="fasle"
+			enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+		</table>
+	</context>
+</generatorConfiguration>

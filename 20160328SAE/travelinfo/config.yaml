@@ -1,0 +1,16 @@
+name: travelinfo
+version: 1
+handle:
+- errordoc: 404 /404.html
+- passwdaccess: if(path ~ "manage") passwd "admin:nimda"
+
+- rewrite: if ( !is_dir() && !is_file() && path ~ "demo" ) goto "cy/效果图/效果图详情.html"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "welcome" ) goto "welcome.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/ip" ) goto "travel/ip.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/travel" ) goto "travel/travel.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/position" ) goto "travel/position.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/weather" ) goto "travel/weather.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/color" ) goto "travel/color.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/option" ) goto "travel/option.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "php/converter" ) goto "php/converter.php"
+- rewrite: if ( !is_dir() && !is_file() && path ~ "travel/rmb" ) goto "travel/rmb.php"

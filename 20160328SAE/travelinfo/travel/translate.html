@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../plugins/jquery.mobile.css">
+<script src="../plugins/jquery.js"></script>
+<script src="../plugins/jquery.mobile.js"></script>
+<script type="text/javascript" src="js/is_mobile.js"></script>
+<title>翻译</title>
+</head>
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="header">
+			<h1>词典</h1>
+		</div>
+
+		<div data-role="content">
+			<div data-role="fieldcontain">
+				<input type="search" name="search" id="search_text" hidden="true"
+					placeholder="中/英...">
+			</div>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-icon="check">翻译</a></li>
+					<li><a href="#" data-icon="info">查词</a></li>
+				</ul>
+			</div>
+			<input readonly="true" onclick="onClick(this)" name="after" id="after" value=""/>
+		</div>
+
+		<div data-role="footer">
+			<h1>结果仅供参考</h1>
+		</div>
+	</div>
+</body>
+</html>
