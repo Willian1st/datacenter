@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     titleBar.setText(R.string.title_home);
+                    display.loadUrl(HOME);
                     return true;
                 case R.id.navigation_dashboard:
                     return true;
@@ -224,4 +225,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onKeyDown(keyCode, event);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        System.exit(0);
+    }
 }
