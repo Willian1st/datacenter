@@ -1,5 +1,9 @@
 package com.ws.browser;
 
+import android.content.ClipData;
+import android.content.ClipDescription;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.net.http.SslError;
 import android.os.Bundle;
@@ -230,4 +234,25 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         System.exit(0);
     }
+
+    /**
+     * 获取剪切板内容
+     *
+     * @param context
+     */
+    public String getTextFromClip(Context context) {
+        String result = "";
+        ClipboardManager clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+        if (!clipboardManager.hasPrimaryClip())
+            return result;
+        ClipData clipData = clipboardManager.getPrimaryClip();
+        //获取 ClipDescription
+        ClipDescription clipDescription = clipboardManager.getPrimaryClipDescription();
+        //获取 lable
+        String lable = clipDescription.getLabel().toString();
+        //获取 text
+        result = clipData.getItemAt(0).getText().toString();
+        return result;
+    }
+
 }
