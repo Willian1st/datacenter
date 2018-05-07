@@ -1,0 +1,274 @@
+
+/* 教师 品牌建设 */
+.first > img, .second > img, .third > img {
+    margin: 50px auto;
+}
+
+.first .row {
+    background-color: #F2F1EF;
+    margin-top: 20px;
+    position: relative;
+}
+.first .row div {
+    padding: 0;
+}
+.first .row > img {
+    vertical-align: middle;
+}
+.first .row .infos {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%);
+    max-width: 50%;
+}
+.first .row .infos h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.first .row .infos p {
+    font-size: 16px;
+}
+.first .row .infos p span {
+    display: inline-block;
+    width: 80px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .first .row .infos {
+        position: static;
+        padding: .266667rem /* 20/75 */ 0 0 .266667rem /* 20/75 */;
+        max-width: 100%;
+        transform: translateY(0);
+    }
+
+    .first .row .infos h2 {
+        font-size: .426667rem /* 32/75 */;
+        margin-bottom: .066667rem /* 5/75 */;
+    }
+    .first .row .infos p {
+        font-size: .186667rem /* 14/75 */;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin-bottom: 0;
+    }
+    .first .row .infos p span {
+        width: 1.333333rem /* 100/75 */;
+    }
+}
+/* 课堂把控指导 */
+.second .row > div {
+    background-color: #F2F1EF;
+    padding: 0;
+}
+.second .row .infos {
+    height: 200px;
+    padding: 0 30px;
+}
+.second .row .infos h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.second .row .infos p {
+    line-height: 30px;
+    margin-bottom: 0;
+}
+@media screen and (max-width: 992px) {
+    .second .row .infos {
+        padding: 0 20px;
+    }
+    .second .row .infos h3 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+
+    .second .row .infos {
+        padding: 0 .106667rem /* 8/75 */;
+        max-height: 2rem;
+        overflow: hidden;
+    }
+    .second .row .infos h3 {
+        font-size: .373333rem /* 28/75 */;
+        margin-top: 0;
+        margin-bottom: .133333rem /* 10/75 */;
+    }
+    .second .row .infos p {
+        font-size: .186667rem /* 14/75 */;
+        line-height: 1.5;
+        white-space: nowrap;        
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+    .second .row .last p {
+        white-space: normal;
+    }
+}
+/* 课堂互动 */
+.third {
+    padding-bottom: 40px;
+}
+.third .row {
+    margin: 0;
+}
+.third .row > div {
+    background-color: #F2F1EF;
+    height: 500px;
+    padding: 0;
+}
+.third .row > div:first-of-type {
+    border-right: 15px solid #fff;
+}
+.third .row > div:last-of-type {
+    border-left: 15px solid #fff;
+}
+.third .row .infos {
+    margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 50px;
+}
+.third .row .infos h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.third .row .infos p {
+    line-height: 30px;
+}
+.third .row .infos p span {
+    margin-right: 10px;
+    font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+    .first .row,.second .row,.third .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .third {
+        padding-bottom: .4rem /* 30/75 */;
+    }
+    .third .row > div:first-of-type {
+        border: 0;
+    }
+    .third .img-responsive {
+        width: 100%;
+    }
+    .third .row > div {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .third .row > div:last-of-type {
+        border: 0;
+    }
+    .third .row .infos {
+        margin-top: .266667rem /* 20/75 */;
+        padding-left: .4rem /* 30/75 */;
+        padding-right: .666667rem /* 50/75 */;
+    }
+    .third .row .infos h3 {
+        margin: .266667rem /* 20/75 */ 0;
+        font-size: .426667rem /* 32/75 */;
+    }
+    .third .row .infos p {
+        font-size: .373333rem /* 28/75 */;
+        line-height: 1.5;
+    }
+    .third .row .infos p span {
+        margin-right: .133333rem /* 10/75 */;
+        font-size: .373333rem /* 28/75 */;
+    }
+}
+
+/* 师资的css */
+.part1,.part2,.part3 {
+    padding: 30px 0;
+}
+
+p {
+    font-size: 14px;
+}
+
+.part2 .old, .part2 .new {
+    padding: 30px 0;
+}
+.part2 .old {
+    background: url(../images/teacher_asset_17.png) no-repeat center bottom;
+}
+.part2 .new {
+    background: url(../images/teacher_asset_16.png) no-repeat center bottom;
+}
+.part2 h2 {
+    font-weight: normal;
+}
+
+
+.part2 .imgBox {
+    padding: 30px 0;
+}
+.part2 .oldImg {
+    color: #333;
+    background-color: #F2F2F2;
+    padding: 30px;
+}
+.part2 .newImg {
+    color: #FF6D00;
+    background-color: #FFE4CF;
+    padding: 30px;
+}
+.part2 .oldImg > div, .part2 .newImg > div {
+    margin-top: 40px;
+}
+.part2 .imgBox h4 {
+    margin-top: 20px;
+}
+.part2 .imgBox img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.part3 > img {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .part2 .old, .part2 .new {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .part1 .row, .part2 .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .part2 .old, .part2 .new {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+    .part2 h2 {
+        font-size: .4rem /* 30/75 */;
+    }
+    .part2 .oldImg > div, .part2 .newImg > div {
+        margin-top: .533333rem /* 40/75 */;
+    }
+    .part2 .imgBox h4 {
+        height: .8rem /* 60/75 */;
+        line-height: .4rem /* 30/75 */;
+        font-size: .373333rem /* 28/75 */;
+        margin-top: .266667rem /* 20/75 */;
+        margin-bottom: 0;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    .first > img, .second > img, .third > img {
+        margin: .4rem /* 30/75 */ auto;
+    }
+}

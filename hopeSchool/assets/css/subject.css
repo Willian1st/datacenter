@@ -1,0 +1,129 @@
+
+/*  banner */
+.jumbotron {
+    padding: 0;
+}
+/* 三大优势 */
+.thumbnail {
+    border: 0;
+    margin-bottom: 0;
+}
+.text-muted {
+    margin: 20px 0 30px;
+}
+.three-row h3 {
+    font-size: 24px;
+}
+.three-row p {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+/* 中科数学办学宗旨 */
+.tenet {
+    background: url(../images/subject_04.png) no-repeat center;
+    padding: 50px 0 80px;
+}
+.tenet .slide {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+.tenet .slide .carousel-inner { 
+    margin: 0 auto;
+}
+.tenet .slide .carousel-inner .item {
+    padding: 30px;
+    max-width: 1060px;
+    background-color: #FBDBC2;
+}
+.tenet .slide .carousel-control {
+    width: 27px;
+    height: 51px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+.tenet .slide .left {
+    left: -8%;
+    background: url(../images/subject_arr_left.png) no-repeat center;
+}
+.tenet .slide .right {
+    right: -8%;
+    background: url(../images/subject_arr_right.png) no-repeat center;
+}
+@media screen and (max-width: 768px) {
+    .tenet .container {
+        padding: 0;
+    }
+    .tenet .slide {
+        width: 80%;
+    }
+    .tenet .slide .carousel-inner .item {
+        padding: .133333rem /* 10/75 */;
+    }
+    .tenet .slide .carousel-control {
+        width: .36rem /* 27/75 */;
+        height: .68rem /* 51/75 */;
+        background-size: 100%;
+    }
+}
+/* 科学分层 */
+.science {
+    padding: 90px 0;
+}
+.science h2 {
+    letter-spacing: 2px;
+}
+.science .col-lg-4 .thumbnail {
+    max-width: 305px;
+    height: 632px;
+    padding-top: 70px;
+    margin: 0 auto;
+    background: url(../images/subject_08.png) no-repeat top center;
+}
+.science .col-lg-4 .thumbnail h3 {
+    margin-top: 120px;
+    margin-bottom: 50px;
+}
+.science .col-lg-4 .thumbnail .txt {
+    font-size: 18px;
+    padding: 0 40px;
+}
+.science .col-lg-4 .thumbnail .txt strong {
+    font-size: 30px;
+    color: #FF6D00;
+}
+
+
+@media screen and (max-width: 768px) {
+    .three-row h3 {
+        font-size: .426667rem /* 32/75 */;
+        font-weight: bold;
+    }
+    .three-row p {
+        margin-top: .266667rem /* 20/75 */;
+        font-size: .373333rem /* 28/75 */;
+    }
+    h2 {
+        font-size: .533333rem /* 40/75 */;
+        font-weight: bold;
+    }
+    h5 {
+        font-size: .373333rem /* 28/75 */;
+    }
+    .science {
+        padding: .666667rem /* 50/75 */ 0;
+    }
+    .science .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .science .col-lg-4 .thumbnail h3 {
+        font-size: .48rem /* 36/75 */;
+        font-weight: bold;
+    }
+    .science .col-lg-4 .thumbnail .txt {
+        font-size: .373333rem /* 28/75 */;
+    }
+}
