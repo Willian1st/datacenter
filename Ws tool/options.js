@@ -36,6 +36,49 @@ if (typeof(angular) != 'undefined') {
 			}
 		}
 	});
+	$("#multiSearch").on("click",function(){
+		layer.closeAll();
+		var keyWord=$("#keyWord").val();
+		if(!keyWord){
+			layer.msg("你想搜索些什么呢？");
+			return;
+		}
+		layer.open({
+			type: 2,
+			shade:0,
+			title: keyWord + " 的搜索结果",
+			area: ['600px', '400px'],
+			content: "http://www.baidu.com/s?wd="+keyWord,
+			offset: ['50px', '0px']
+		}); 
+		layer.open({
+			type: 2,
+			shade:0,
+			title: keyWord + " 的搜索结果",
+			area: ['600px', '400px'],
+			content: "http://www.so.com/s?q="+keyWord,
+			offset: ['50px', '600px']
+		});
+		layer.open({
+			type: 2,
+			shade:0,
+			title: keyWord + " 的搜索结果",
+			area: ['600px', '400px'],
+			content: "http://www.sogou.com/web?query="+keyWord,
+			offset: ['400px', '0px']
+		});
+		layer.open({
+			type: 2,
+			shade:0,
+			title: keyWord + " 的搜索结果",
+			area: ['600px', '400px'],
+			content: "https://cn.bing.com/search?q="+keyWord,
+			offset: ['400px', '600px']
+		});
+	});
+	$("#multiSearchReset").on("click",function(){
+		layer.closeAll();
+	});
 	app.controller('optionCtrl', function ($scope, $rootScope) {
 		$scope.sendHistory = [];
 		var length = localStorage.length;
