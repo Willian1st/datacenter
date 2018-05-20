@@ -20,6 +20,9 @@ if (typeof(angular) != 'undefined') {
 					}).when('/tools', {
 						templateUrl: 'page/tools.html',
 						controller: 'toolsCtrl'
+					}).when('/search', {
+						templateUrl: 'page/search.html',
+						controller: 'searchCtrl'
 					}).otherwise({
 						redirectTo: '/'
 					});
@@ -489,6 +492,47 @@ if (typeof(angular) != 'undefined') {
 	app
 	.controller(
 		"toolsCtrl",
+		function ($scope) {
+		$scope.tools = {
+			init: function () {
+				$("#fileToPlay").on("change", function () {
+					$scope.tools.play();
+				});
+				var files = localStorage.getItem("playList");
+				if (files) {
+					$scope.tools.files = JSON.parse(files);
+				}
+				$("#addressToPlay").on("change", function () {
+					$scope.tools.play(this.value);
+				});
+			},
+			play: function (data) {
+				var player = document.getElementById('PlayFlie');
+				if (!data) {
+					$scope.tools.files = document.getElementById('fileToPlay').files;
+					$.each($scope.tools.files, function (i, v) {
+						var url = URL.createObjectURL($scope.tools.files[i]);
+						this.url = url;
+						this.filename = $scope.tools.files[i].name;
+					});
+					localStorage.setItem("playList", JSON.stringify($scope.tools.files));
+					$("#PlayFlie").attr("src", $scope.tools.files[0].url);
+					$scope.$apply();
+				} else {
+					$("#PlayFlie").attr("src", data);
+					player.play();
+				}
+
+			},
+			files: []
+		}
+		$scope.$on('$routeChangeSuccess', function (event, current, previous) {
+			$scope.tools.init();
+		});
+	});
+	app
+	.controller(
+		"searchCtrl",
 		function ($scope) {
 		$scope.tools = {
 			init: function () {
