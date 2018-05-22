@@ -504,7 +504,25 @@ if (typeof (angular) != 'undefined') {
 	app.controller("searchCtrl", function($scope, $http, $rootScope, $routeParams) {
 		$scope.tools = {
 			init : function() {
+				var switchFlag = false;
+				var url = [ {
+					web : "http://www.baidu.com/s?wd=" + $routeParams.keyWord,
+					mobile : "http://m.baidu.com/s?word=" + $routeParams.keyWord
+				}, {
+					web : "http://www.so.com/s?q=" + $routeParams.keyWord,
+					mobile : "https://m.so.com/s?q=" + $routeParams.keyWord
+				}, {
+					web : "http://www.sogou.com/web?query=" + $routeParams.keyWord,
+					mobile : "https://m.sogou.com/web/searchList.jsp?keyword=" + $routeParams.keyWord
+				}, {
+					web : "https://cn.bing.com/search?q=" + $routeParams.keyWord,
+					mobile : "https://cn.bing.com/search?q=" + $routeParams.keyWord
+				} ];
 				$(".search-result").css("height", $(window).height() - 100);
+				$.each(url, function(i, v) {
+					$("#result" + i).attr("src", v.mobile);
+				});
+				return;
 				$("#result1").attr("src", "http://www.baidu.com/s?wd=" + $routeParams.keyWord);
 				$("#result2").attr("src", "http://www.so.com/s?q=" + $routeParams.keyWord);
 				$("#result3").attr("src", "http://www.sogou.com/web?query=" + $routeParams.keyWord);
