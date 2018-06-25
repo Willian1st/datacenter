@@ -85,7 +85,7 @@
 submit = function (userName, passWord) {
 	var users = [{
 			name: 'sys',
-			code: '666666'
+			code: 'longruan++'
 		}, {
 			name: 'sysAdmin',
 			code: 'aqy+123'
