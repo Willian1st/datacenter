@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
-	<context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
+    <!-- 指定数据连接驱动jar地址 -->
+    <classPathEntry location="F:\mvn\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
+    <context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
 		<!-- 注释 -->
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
 			<property name="suppressDate" value="true" /> <!-- 是否生成注释代时间戳 -->
 		</commentGenerator>
-		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://192.168.0.88:3306/lrapp"
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/lrapp"
 			userId="root" password="root">
 		</jdbcConnection>
 		<javaModelGenerator targetPackage="com.longruan.safecloud.basemanager.po" targetProject="Temp">
@@ -21,9 +23,10 @@
 			targetProject="Temp">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<table tableName="subDepartment" domainObjectName="SubDepartment" enableSelectByPrimaryKey="true" enableCountByExample="true"
+		<table tableName="enterprise" domainObjectName="Enterprise" enableSelectByPrimaryKey="true" enableCountByExample="true"
 			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="fasle"
 			enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+            <property name="useActualColumnNames" value="true" />
 		</table>
 	</context>
 </generatorConfiguration>
