@@ -291,7 +291,7 @@ if (typeof (angular) != 'undefined') {
 			.controller(
 					"satelliteCtrl",
 					function($scope) {
-						$("#satellite,#satelliteTwo").css("height", window.screen.availHeight - 200 + "px");
+						$("#satellite,#satelliteTwo").css("height", window.screen.availHeight - 0 + "px");
 						$scope.satellite = {
 							oneShow : false,
 							twoShow : true,
