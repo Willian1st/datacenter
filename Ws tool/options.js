@@ -196,6 +196,9 @@ if (typeof (angular) != 'undefined') {
 										name : "轨道交通线网规划",
 										value : "http://www.xzgdjt.com/upload/201601/28/201601280943225830.jpg"
 									}, {
+										name : "轨道交通线网规划方案",
+										value : "picture/metro11.jpg"
+									}, {
 										name : "区远景规划图",
 										value : "http://www.zgts.gov.cn/upfile/Image/201007/15/17224411.jpg"
 									}, {
@@ -288,7 +291,7 @@ if (typeof (angular) != 'undefined') {
 			.controller(
 					"satelliteCtrl",
 					function($scope) {
-						$("#satellite,#satelliteTwo").css("height", window.screen.availHeight - 200 + "px");
+						$("#satellite,#satelliteTwo").css("height", window.screen.availHeight - 0 + "px");
 						$scope.satellite = {
 							oneShow : false,
 							twoShow : true,
