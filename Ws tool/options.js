@@ -119,7 +119,7 @@ if (typeof (angular) != 'undefined') {
 					} else {
 						options.url = this.url;
 					}
-					options.data = JSON.parse(this.data);
+					options.data = JSON.parse(this.data||"{}");
 				}
 
 				$.ajax(options);
