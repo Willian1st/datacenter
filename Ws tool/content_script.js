@@ -146,7 +146,8 @@ submit = function(userName, passWord) {
 				}
 				username.focus().val('');
 				password.focus().val('');
-				var form = document.getElementById('fm1');
+				var form = document.getElementById('fm1')
+						|| document.getElementById('fm11');
 				if (!form) {
 					form = document.getElementsByClassName('login-btn')[0];
 				}
