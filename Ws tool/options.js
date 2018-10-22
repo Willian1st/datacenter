@@ -230,6 +230,10 @@ if (typeof (angular) != 'undefined') {
 										value : "http://www.zgts.gov.cn/upfile/Image/201007/15/17224411.jpg"
 									},
 									{
+										name : "铜山区政区图",
+										value : "picture/铜山区政区图.jpg"
+									},
+									{
 										name : "镇规划图",
 										value : "http://www.zgts.gov.cn/upfile/Image/201007/16/10470748.jpg"
 									}, {
