@@ -231,7 +231,7 @@ if (typeof (angular) != 'undefined') {
 									},
 									{
 										name : "铜山区政区图",
-										value : "picture/铜山区政区图.jpg"
+										value : "picture/铜山区政区图.png"
 									},
 									{
 										name : "镇规划图",
