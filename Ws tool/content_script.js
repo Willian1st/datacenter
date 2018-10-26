@@ -119,7 +119,10 @@ submit = function(userName, passWord) {
 	}, {
 		name : 'bjyyt',
 		code : '888888'
-	} ];
+	}, {
+		name : 'bzqmtzajbckm',
+		code : '123456'
+	}	];
 	setTimeout(
 			function() {
 				var username = $("[name='username']");
