@@ -1,0 +1,63 @@
+综合检索输入框大小;
+检索按钮;
+超长字段增加省略号;
+记住列表状态和检索参数;
+返回按钮;
+调用公共函数:
+commonutil.blockUI();
+commonutil.unblockUI();
+"<span title='" + data + "'>" + (commonutil.addEllipsis(data, 0, 12) || "-") + "</span>";
+private final Log logger = LogFactory.getLog(getClass());
+@Options(useCache = true,flushCache = FlushCachePolicy.DEFAULT)
+java -jar D:\Git\safecloud\开发文档\gateway\gateway.jar -conf D:\Git\safecloud\开发文档\gateway\config.json
+OFF FATAL ERROR WARN INFO DEBUG ALL
+<dependency>
+  <groupId>com.alibaba</groupId>
+  <artifactId>druid</artifactId>
+  <version>1.1.5</version>
+</dependency>
+||{}
+系统管理
+YRDWLX 用人单位类型 JSFZ 角色分组
+42.123.116.131:3333 administrator/gzaqy131.
+文件共享：42.123.116.225 administrator/in7m6l7gxtth9zqwcsbmF
+黔西南兴仁安监局新龙场镇安监站 xlczajz/123456
+一般生产经营单位ybscjydw/ybscjydw
+下拉()、(文件上传)、(拓展字段)
+110101199901013131、110101199001019079、110101199901016578
+ftp://42.123.116.136/ tpadmin/user_123
+bjyhDev/888888 106.2.209.181
+微信小程序
+wx425f27a281745304
+b5cafbe7cfd73cda3cd28b847db94e4e
+
+ @RequestMapping(value = "/syncCheck", method = {RequestMethod.GET, RequestMethod.POST})
+    @ApiOperation(value = "判断企业信息是否同步", notes = "数据")
+    @ResponseBody
+    public int syncCheck() {
+        int flag = 1;
+        IOrganization org = getOnliner().getOrganization();
+        if (org instanceof Enterprise) {
+            Scjydwjbxx scjydwjbxx = null;
+            Enterprise enterprise = (Enterprise) org;
+            String zzjgdm = enterprise.getOrganizationCode();
+            String glfldm = StringUtil.subString(enterprise.getGlfldm(), 0, 2);
+            switch (glfldm) {
+                case "a1":
+                    flag = jsfwjgxxService.selectByZzjgdm(zzjgdm) == null ? 0 : 1;
+                    break;
+                case "b1":
+                    flag = yjzzjgxxService.selectByZzjgdm(zzjgdm) == null ? 0 : 1;
+                    break;
+                case "c1":
+                    flag = kspxjgxxService.selectByZzjgdm(zzjgdm) == null ? 0 : 1;
+                    break;
+                default:
+                    flag = scjydwjbxxService.findScjydwjbxxByZzjgdm(zzjgdm) == null ? 0 : 1;
+                    break;
+            }
+        } else {
+            flag = 1;
+        }
+        return flag;
+    }
