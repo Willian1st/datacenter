@@ -105,6 +105,9 @@ submit = function(userName, passWord) {
 		name : 'lpsAdmin',
 		code : '123456'
 	}, {
+		name : 'qxnzxrajj',
+		code : '123456'
+	}, {
 		name : 'lps_zsq_Admin',
 		code : '123456'
 	}, {
