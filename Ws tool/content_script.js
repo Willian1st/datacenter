@@ -105,6 +105,9 @@ submit = function(userName, passWord) {
 		name : 'lpsAdmin',
 		code : '123456'
 	}, {
+		name : 'qxnzxrajj',
+		code : '123456'
+	}, {
 		name : 'lps_zsq_Admin',
 		code : '123456'
 	}, {
@@ -121,6 +124,9 @@ submit = function(userName, passWord) {
 		code : '888888'
 	}, {
 		name : 'bzqmtzajbckm',
+		code : '123456'	
+	}, {
+		name : 'xlczajz',
 		code : '123456'
 	}	];
 	setTimeout(
@@ -150,11 +156,11 @@ submit = function(userName, passWord) {
 				username.focus().val('');
 				password.focus().val('');
 				var form = document.getElementById('fm1')
-						|| document.getElementById('fm11');
+						|| document.getElementById('fm11') || document.getElementById('fm2');
 				if (!form) {
 					form = document.getElementsByClassName('login-btn')[0];
 				}
-				if (!form) {
+				if (!form && document.getElementsByTagName('iframe')[0]) {
 					form = document.getElementsByTagName('iframe')[0].contentWindow.document
 							.getElementById('fm1');
 				}
