@@ -2,8 +2,10 @@
 	<hr/>
 	<div class="row">
 	  <div class="col-md-12">
-	  	<div class="row">
-		  <div class="col-md-3">
+	  	<div class="row">		  
+		  <div class="tab-content tools-content">
+			<div role="tabpanel" class="tab-pane active">
+			<div class="col-md-3">
 			<ul class="list-group">
 			  <li class="list-group-item" ng-repeat="file in tools.files|orderBy : 'name'">
 				<button type="button" 
@@ -35,9 +37,24 @@
 			  </div>
 			</form>
 		  </div>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="profile">
+				<input type="text" class="form-control" placeholder="字符串长度"/>
+			</div>
+			<div role="tabpanel" class="tab-pane">
+				<input type="text" class="form-control" placeholder="JSON格式化"/>
+			</div>
+			<div role="tabpanel" class="tab-pane">
+				<input type="text" class="form-control" placeholder="字母大小写"/>
+			</div>
+		<div>
+
+	</div>
+		  </div>
 		  <div class="col-md-2">
-			<div class="list-group">
+			<div class="list-group tools">
 			  <button type="button" class="list-group-item">多媒体播放</button>
+			  <button type="button" class="list-group-item">字符串长度</button>
 			  <button type="button" class="list-group-item">JSON格式化</button>
 			  <button type="button" class="list-group-item">字母大小写</button>
 			  <button type="button" class="list-group-item">时间格式化</button>

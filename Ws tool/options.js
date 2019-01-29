@@ -554,6 +554,9 @@ if (typeof (angular) != 'undefined') {
 					function($scope) {
 						$scope.tools = {
 							init : function() {
+								$(".tools button").on("click",function(){
+									$(this).show();
+								});
 								$("#fileToPlay").on("change", function() {
 									$scope.tools.play();
 								});
