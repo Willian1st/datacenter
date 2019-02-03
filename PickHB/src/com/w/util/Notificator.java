@@ -82,9 +82,9 @@ public class Notificator {
 
 			// 跳转对象
 			PendingIntent contentItent = PendingIntent.getActivity(context, 0, intent, 0);
-			notification.setLatestEventInfo(context, contentTitle, contentText, contentItent);
+			//notification.setLatestEventInfo(context, contentTitle, contentText, contentItent);
 		} else {
-			notification.setLatestEventInfo(context, contentTitle, contentText, null);
+			//notification.setLatestEventInfo(context, contentTitle, contentText, null);
 		}
 		// 把Notification传递给NotificationManager
 		notificationManager.notify(position, notification);

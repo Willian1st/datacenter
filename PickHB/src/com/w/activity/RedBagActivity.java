@@ -1,20 +1,5 @@
 package com.w.activity;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
@@ -34,11 +19,20 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.w.R;
 import com.w.service.RedBagService;
 import com.w.util.CommonUtil;
-import com.w.util.HttpUtil;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -60,26 +54,8 @@ public class RedBagActivity extends Activity {
 				open();
 			}
 		});
-		/**
-		 * 注册设备信息
-		 */
-		Thread t = new Thread(new Runnable() {
-			@Override
-			public void run() {
-				sendDevice();
-			}
-		});
-		t.start();
 	}
 
-	private void sendDevice() {
-		TelephonyManager tm = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
-		List<NameValuePair> params = new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("sim", tm.getSimSerialNumber()));
-		params.add(new BasicNameValuePair("deviceid", tm.getDeviceId()));
-		params.add(new BasicNameValuePair("userid", tm.getSubscriberId()));
-		HttpUtil.doPost(VALIDATE, params);
-	}
 
 	/**
 	 * 提示打开辅助功能

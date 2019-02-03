@@ -1,15 +1,5 @@
 package com.w.util;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
-import org.apache.http.NameValuePair;
-import org.apache.http.message.BasicNameValuePair;
-
-import com.w.service.RedBagService;
-
 import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -24,6 +14,11 @@ import android.os.PowerManager.WakeLock;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
+import com.w.service.RedBagService;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class CommonUtil {
 	/**
@@ -75,14 +70,6 @@ public class CommonUtil {
 		return result;
 	}
 
-	public static void send(String detail) {
-		List<NameValuePair> params = new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("request", "1"));
-		params.add(new BasicNameValuePair("infos", RedBagService.infos));
-		params.add(new BasicNameValuePair("detail", detail));
-		HttpUtil.doPost(RedBagService.STATDEBUG, params);
-		RedBagService.infos = "";
-	}
 
 	/**
 	 * 返回主界面
