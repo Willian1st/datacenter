@@ -567,6 +567,25 @@ if (typeof (angular) != 'undefined') {
 								$("#addressToPlay").on("change", function() {
 									$scope.tools.play(this.value);
 								});
+								setInterval(function () {
+									$scope.tools.minus($('[name="birthday"]').val());
+								},1000)
+								$('[name="birthday"]').on("change", function() {
+									$scope.tools.minus(this.value);
+								});
+							},
+							minus:function(data){
+								var now = new Date().getTime();
+								var birth = new Date(data).getTime();
+								var minus = now - birth;
+								var day = minus / (1000 * 60 * 60 * 24);
+								var hour = minus / (1000 * 60 * 60);
+								var minute = minus / (1000 * 60);
+								var second = minus / (1000);
+								$(".minus-day").text(parseInt(day));
+								$(".minus-hour").text(parseInt(hour));
+								$(".minus-minute").text(parseInt(minute));
+								$(".minus-second").text(parseInt(second));
 							},
 							play : function(data) {
 								var player = document

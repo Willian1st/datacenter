@@ -1,67 +1,79 @@
 <div class="container-fluid">
-	<hr/>
-	<div class="row">
-	  <div class="col-md-12">
-	  	<div class="row">		  
-		  <div class="tab-content tools-content">
-			<div role="tabpanel" class="tab-pane active">
-			<div class="col-md-3">
-			<ul class="list-group">
-			  <li class="list-group-item" ng-repeat="file in tools.files|orderBy : 'name'">
-				<button type="button" 
-				url="{{file.url}}" 
-				class="btn btn-xs btn-link" 
-				ng-click="tools.play(file.url)"
-				style="white-space:normal"
-				>
-				{{file.name||file.filename}}
-				</button>
-			  </li>
-			</ul>
-		  </div>
-		  <div class="col-md-7">
-			<form class="form-horizontal">
-			  <div class="form-group">
-				<input type="file" id="fileToPlay" accept="video/*, audio/*" multiple="multiple"/>
-			  </div>
-			  <div class="form-group" style="width: 100%">
-				  <input type="text" class="form-control" placeholder="播放地址" id="addressToPlay"/>
-			  </div>
-			  <div class="form-group">
-				<video class="col-md-12" controls id="PlayFlie">
-					您的浏览器不支持 video 标签。
-				</video>
-				<audio class="col-md-12 hidden" controls id="PlayFlie">
-					您的浏览器不支持 video 标签。
-				</audio>
-			  </div>
-			</form>
-		  </div>
-			</div>
-			<div role="tabpanel" class="tab-pane" id="profile">
-				<input type="text" class="form-control" placeholder="字符串长度"/>
-			</div>
-			<div role="tabpanel" class="tab-pane">
-				<input type="text" class="form-control" placeholder="JSON格式化"/>
-			</div>
-			<div role="tabpanel" class="tab-pane">
-				<input type="text" class="form-control" placeholder="字母大小写"/>
-			</div>
-		<div>
-
-	</div>
-		  </div>
-		  <div class="col-md-2">
-			<div class="list-group tools">
-			  <button type="button" class="list-group-item">多媒体播放</button>
-			  <button type="button" class="list-group-item">字符串长度</button>
-			  <button type="button" class="list-group-item">JSON格式化</button>
-			  <button type="button" class="list-group-item">字母大小写</button>
-			  <button type="button" class="list-group-item">时间格式化</button>
-			  <button type="button" class="list-group-item">二维码生成</button>
-			</div>
-		  </div>
-		</div>
-	  </div>
-	</div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="tab-content tools-content">
+                    <div role="tabpanel" class="tab-pane active">
+                        <div class="col-md-3">
+                            <ul class="list-group">
+                                <li class="list-group-item" ng-repeat="file in tools.files|orderBy : 'name'">
+                                    <button type="button"
+                                            url="{{file.url}}"
+                                            class="btn btn-xs btn-link"
+                                            ng-click="tools.play(file.url)"
+                                            style="white-space:normal"
+                                    >
+                                        {{file.name||file.filename}}
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-7">
+                            <form class="form-inline content-minus">
+                                <div class="form-group">
+                                    <label>选择日期：</label>
+                                    <input type="text" name="birthday" value="2018-12-08" class="form-control"
+                                           placeholder="间隔天数"/>
+                                </div>
+                                <h2 class="text-primary">经过了 <span class="minus-day">-</span> 天</h2>
+                                <h1 class="text-success">
+                                    <small>经过了</small>
+                                    <span class="minus-hour">-</span>
+                                    <small>小时</small>
+                                </h1>
+                                <h2 class="text-info">
+                                    <small>经过了</small>
+                                    <span class="minus-minute">-</span>
+                                    <small>分钟</small>
+                                </h2>
+                                <h3 class="text-warning">
+                                    <small>经过了</small>
+                                    <span class="minus-second">-</span>
+                                    <small>秒</small>
+                                </h3>
+                            </form>
+                            <form class="form-horizontal content-player" style="display: none">
+                                <div class="form-group">
+                                    <input type="file" id="fileToPlay" accept="video/*, audio/*" multiple="multiple"/>
+                                </div>
+                                <div class="form-group" style="width: 100%">
+                                    <input type="text" class="form-control" placeholder="播放地址" id="addressToPlay"/>
+                                </div>
+                                <div class="form-group">
+                                    <video class="col-md-12" controls id="PlayFlie">
+                                        您的浏览器不支持 video 标签。
+                                    </video>
+                                    <audio class="col-md-12 hidden" controls id="PlayFlie">
+                                        您的浏览器不支持 video 标签。
+                                    </audio>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="list-group tools">
+                        <button type="button" class="list-group-item" ng-click="tools.minus">间隔天数</button>
+                        <button type="button" class="list-group-item">多媒体播放</button>
+                        <button type="button" class="list-group-item">字符串长度</button>
+                        <button type="button" class="list-group-item">JSON格式化</button>
+                        <button type="button" class="list-group-item">字母大小写</button>
+                        <button type="button" class="list-group-item">时间格式化</button>
+                        <button type="button" class="list-group-item">二维码生成</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
