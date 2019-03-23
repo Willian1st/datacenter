@@ -22,26 +22,50 @@
                         <div class="col-md-7">
                             <form class="form-inline content-minus">
                                 <div class="form-group">
-                                    <label>选择日期：</label>
-                                    <input type="text" name="birthday" value="2018-12-08" class="form-control"
+                                    <label>日期：</label>
+                                    <input type="text" name="birthday" value="2018-12-08 11:04:00" class="form-control"
                                            placeholder="间隔天数"/>
+                                    <label> - 当前时间：<span class="now-to-show text-primary"></span></label>
                                 </div>
-                                <h2 class="text-primary">经过了 <span class="minus-day">-</span> 天</h2>
-                                <h1 class="text-success">
-                                    <small>经过了</small>
-                                    <span class="minus-hour">-</span>
+                                <h1 class="">
+                                    <span class="label label-success minus-year">-</span>
+                                    <small>年</small>
+                                    <span class="label label-success minus-month">-</span>
+                                    <small>个月</small>
+                                    <span class="label label-success minus-day">-</span>
+                                    <small>天</small>
+                                    <span class="label label-success minus-hour">-</span>
                                     <small>小时</small>
+                                    <span class="label label-success minus-minute">-</span>
+                                    <small>分钟</small>
+                                    <span class="label label-success minus-second">-</span>
+                                    <small>秒</small>
                                 </h1>
-                                <h2 class="text-info">
-                                    <small>经过了</small>
-                                    <span class="minus-minute">-</span>
+                                <h1>
+                                    <small>共经过了</small>
+                                    <span class="label label-danger total-second">-</span>
+                                    <small>秒</small>
+                                </h1>
+                                <h2>
+                                    <small>共经过了</small>
+                                    <span class="label label-warning total-minute">-</span>
                                     <small>分钟</small>
                                 </h2>
-                                <h3 class="text-warning">
-                                    <small>经过了</small>
-                                    <span class="minus-second">-</span>
-                                    <small>秒</small>
+                                <h3>
+                                    <small>共经过了</small>
+                                    <span class="label label-success total-hour">-</span>
+                                    <small>小时</small>
                                 </h3>
+                                <h4>
+                                    <small>共经过了</small>
+                                    <span class="label label-info total-day">-</span>
+                                    <small>天</small>
+                                </h4>
+                                <h5>
+                                    <small>共经过了</small>
+                                    <span class="label label-primary minus-month">-</span>
+                                    <small>个月</small>
+                                </h5>
                             </form>
                             <form class="form-horizontal content-player" style="display: none">
                                 <div class="form-group">
