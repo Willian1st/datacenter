@@ -4,14 +4,14 @@ if (window.Notification.permission == 'granted') {
     notify.onclick = function () {
         // 如果通知消息被点击,通知窗口将被激活
         window.focus();
-    },
-        notify.onerror = function () {
-            console.log("桌面消息出错！");
-        };
+    };
+    notify.onerror = function () {
+        console.log("桌面消息出错！");
+    };
     notify.onshow = function () {
         setTimeout(function () {
             notify.close();
-        }, 2000)
+        }, 2000);
     };
     notify.onclose = function () {
         console.log("桌面消息关闭！");
@@ -103,11 +103,33 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
             notice.onshow = function () {
                 setTimeout(function () {
                     notice.close();
-                }, 5000);
+                }, 3000);
             };
         });
         sendResponse({
             result: request.cmd
+        });
+    } else if (request.cmd == "xuexi_jifen") {
+        $.ajax({
+            url: "https://pc-api.xuexi.cn/open/api/score/today/queryrate",
+            success: function (data) {
+                var dayScoreDtos = data.data.dayScoreDtos;
+                var text = "";
+                text += (dayScoreDtos[8].name + ":" + dayScoreDtos[8].currentScore + "/" + dayScoreDtos[8].dayMaxScore + " ");
+                text += (dayScoreDtos[0].name + ":" + dayScoreDtos[0].currentScore + "/" + dayScoreDtos[0].dayMaxScore + "\r");
+                text += (dayScoreDtos[1].name + ":" + dayScoreDtos[1].currentScore + "/" + dayScoreDtos[1].dayMaxScore + " ");
+                text += (dayScoreDtos[7].name + ":" + dayScoreDtos[7].currentScore + "/" + dayScoreDtos[7].dayMaxScore + "\r");
+                text += (dayScoreDtos[9].name + ":" + dayScoreDtos[9].currentScore + "/" + dayScoreDtos[9].dayMaxScore);
+                var notice = new window.Notification("积分情况如下", {
+                    icon: "icon16.png",
+                    body: text
+                });
+                notice.onshow = function () {
+                    setTimeout(function () {
+                        notice.close();
+                    }, 5000);
+                };
+            }
         });
     } else if (request.cmd == "xuexi_news") {
         var notice = new window.Notification("Tips", {

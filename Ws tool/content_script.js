@@ -94,6 +94,12 @@
         });
     });
 
+    hotkeys('ctrl+shift+z', function () {
+        chrome.extension.sendRequest({
+            cmd: "xuexi_jifen"
+        });
+    });
+
 });
 submit = function (userName, passWord) {
     var users = [{
@@ -316,14 +322,14 @@ $(function () {
                         }, i * 187000);
                     }
                 });
-            }, 5000);
-        }, 5000);
+            }, 3000);
+        }, 3000);
     } else if (location.href.indexOf("7f9f27c65e84e71e1b7189b7132b4710.html") != -1) {
         setTimeout(function () {
             var video = document.getElementsByTagName("video")[0];
             video.muted = true;
             video.play();
-        }, 5000);
+        }, 3000);
         //新闻联播视频3分钟后关闭
         setTimeout(function () {
             window.close();
