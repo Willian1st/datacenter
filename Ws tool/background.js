@@ -115,36 +115,42 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
             url: "https://pc-api.xuexi.cn/open/api/score/today/query",
             async: false,
             success: function (data) {
-                var score = data.data.score;
-                text += "今日:" + score;
-            }
-        });
-        $.ajax({
-            url: "https://pc-api.xuexi.cn/open/api/score/get",
-            async: false,
-            success: function (data) {
-                var score = data.data.score;
-                text += " 总计:" + score + "\r";
-            }
-        });
-        $.ajax({
-            url: "https://pc-api.xuexi.cn/open/api/score/today/queryrate",
-            success: function (data) {
-                var dayScoreDtos = data.data.dayScoreDtos;
-                text += (dayScoreDtos[8].name + ":" + dayScoreDtos[8].currentScore + "/" + dayScoreDtos[8].dayMaxScore + "\r");
-                text += (dayScoreDtos[0].name + ":" + dayScoreDtos[0].currentScore + "/" + dayScoreDtos[0].dayMaxScore + " ");
-                text += (dayScoreDtos[1].name + ":" + dayScoreDtos[1].currentScore + "/" + dayScoreDtos[1].dayMaxScore + "\n");
-                text += (dayScoreDtos[9].name + ":" + dayScoreDtos[9].currentScore + "/" + dayScoreDtos[9].dayMaxScore + " ");
-                text += (dayScoreDtos[11].name + ":" + dayScoreDtos[11].currentScore + "/" + dayScoreDtos[11].dayMaxScore);
-                var notice = new window.Notification("积分情况如下", {
-                    icon: "icon16.png",
-                    body: text
-                });
-                notice.onshow = function () {
-                    setTimeout(function () {
-                        notice.close();
-                    }, 5000);
-                };
+                if (data.data) {
+                    var score = data.data.score;
+                    text += "今日:" + score;
+                    $.ajax({
+                        url: "https://pc-api.xuexi.cn/open/api/score/get",
+                        async: false,
+                        success: function (data) {
+                            var score = data.data.score;
+                            text += " 总计:" + score + "\r";
+                        }
+                    });
+                    $.ajax({
+                        url: "https://pc-api.xuexi.cn/open/api/score/today/queryrate",
+                        success: function (data) {
+                            var dayScoreDtos = data.data.dayScoreDtos;
+                            text += (dayScoreDtos[8].name + ":" + dayScoreDtos[8].currentScore + "/" + dayScoreDtos[8].dayMaxScore + "\r");
+                            text += (dayScoreDtos[0].name + ":" + dayScoreDtos[0].currentScore + "/" + dayScoreDtos[0].dayMaxScore + " ");
+                            text += (dayScoreDtos[1].name + ":" + dayScoreDtos[1].currentScore + "/" + dayScoreDtos[1].dayMaxScore + "\n");
+                            text += (dayScoreDtos[9].name + ":" + dayScoreDtos[9].currentScore + "/" + dayScoreDtos[9].dayMaxScore + " ");
+                            text += (dayScoreDtos[11].name + ":" + dayScoreDtos[11].currentScore + "/" + dayScoreDtos[11].dayMaxScore);
+                            var notice = new window.Notification("积分情况如下", {
+                                icon: "icon16.png",
+                                body: text
+                            });
+                            notice.onshow = function () {
+                                setTimeout(function () {
+                                    notice.close();
+                                }, 5000);
+                            };
+                        }
+                    });
+                } else {
+                    chrome.tabs.update({
+                        url: "https://pc.xuexi.cn/points/login.html?ref=https%3A%2F%2Fwww.xuexi.cn%2F"
+                    });
+                }
             }
         });
     } else if (request.cmd == "xuexi_video_news") {
