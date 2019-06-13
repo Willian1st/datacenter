@@ -279,6 +279,7 @@ var xuexi = function () {
             if (i < 12) {
                 setTimeout(function () {
                     v.click();
+                    console.log("打开第" + (i + 1) + "篇文章")
                 }, i * 125000);
             }
         });
@@ -316,12 +317,26 @@ $(function () {
                     if (i < 8) {
                         setTimeout(function () {
                             v.click();
+                            console.log("打开第" + (i + 1) + "个视频")
                         }, i * 187000);
                     }
                 });
             }, 3000);
         }, 3000);
     } else if (location.href.indexOf("7f9f27c65e84e71e1b7189b7132b4710.html") != -1) {
+        var documentHeight = $(document).height();
+        var windowHeight = window.innerHeight;
+        var backHeight = -windowHeight;
+        var scrollHeight = documentHeight - windowHeight;
+        var flag = setInterval(function () {
+            scrollHeight = scrollHeight - 50;
+            if (scrollHeight < 0) {
+                clearInterval(flag);
+                window.scrollBy(0, backHeight);
+            } else {
+                window.scrollBy(0, 50);
+            }
+        }, 1000);
         setTimeout(function () {
             var video = document.getElementsByTagName("video")[0];
             video.muted = true;

@@ -160,6 +160,8 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
         sendResponse({
             result: request.cmd
         });
+    } else if (request.cmd == "close") {
+        //chrome.tabs.remove();
     } else {
         sendResponse({
             result: "hi"
