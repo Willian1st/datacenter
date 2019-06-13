@@ -276,7 +276,7 @@ var xuexi = function () {
         //打开前六个文字新闻
         $.each(listNews, function (i, v) {
             v = $(v);
-            if (i < 10) {
+            if (i < 12) {
                 setTimeout(function () {
                     v.click();
                 }, i * 125000);
@@ -287,9 +287,6 @@ var xuexi = function () {
 
 $(function () {
     if (location.href.indexOf("lgpage/detail/index.html?id=") != -1) {
-        chrome.extension.sendRequest({
-            cmd: "xuexi_news"
-        });
         var documentHeight = $(document).height();
         var windowHeight = window.innerHeight;
         var backHeight = -windowHeight;

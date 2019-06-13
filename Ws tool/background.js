@@ -110,16 +110,32 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
             result: request.cmd
         });
     } else if (request.cmd == "xuexi_jifen") {
+        var text = "";
+        $.ajax({
+            url: "https://pc-api.xuexi.cn/open/api/score/today/query",
+            async: false,
+            success: function (data) {
+                var score = data.data.score;
+                text += "今日:" + score;
+            }
+        });
+        $.ajax({
+            url: "https://pc-api.xuexi.cn/open/api/score/get",
+            async: false,
+            success: function (data) {
+                var score = data.data.score;
+                text += " 总计:" + score + "\r";
+            }
+        });
         $.ajax({
             url: "https://pc-api.xuexi.cn/open/api/score/today/queryrate",
             success: function (data) {
                 var dayScoreDtos = data.data.dayScoreDtos;
-                var text = "";
-                text += (dayScoreDtos[8].name + ":" + dayScoreDtos[8].currentScore + "/" + dayScoreDtos[8].dayMaxScore + " ");
-                text += (dayScoreDtos[0].name + ":" + dayScoreDtos[0].currentScore + "/" + dayScoreDtos[0].dayMaxScore + "\r");
-                text += (dayScoreDtos[1].name + ":" + dayScoreDtos[1].currentScore + "/" + dayScoreDtos[1].dayMaxScore + " ");
-                text += (dayScoreDtos[7].name + ":" + dayScoreDtos[7].currentScore + "/" + dayScoreDtos[7].dayMaxScore + "\r");
-                text += (dayScoreDtos[9].name + ":" + dayScoreDtos[9].currentScore + "/" + dayScoreDtos[9].dayMaxScore);
+                text += (dayScoreDtos[8].name + ":" + dayScoreDtos[8].currentScore + "/" + dayScoreDtos[8].dayMaxScore + "\r");
+                text += (dayScoreDtos[0].name + ":" + dayScoreDtos[0].currentScore + "/" + dayScoreDtos[0].dayMaxScore + " ");
+                text += (dayScoreDtos[1].name + ":" + dayScoreDtos[1].currentScore + "/" + dayScoreDtos[1].dayMaxScore + "\n");
+                text += (dayScoreDtos[9].name + ":" + dayScoreDtos[9].currentScore + "/" + dayScoreDtos[9].dayMaxScore + " ");
+                text += (dayScoreDtos[11].name + ":" + dayScoreDtos[11].currentScore + "/" + dayScoreDtos[11].dayMaxScore);
                 var notice = new window.Notification("积分情况如下", {
                     icon: "icon16.png",
                     body: text
@@ -131,32 +147,9 @@ chrome.extension.onRequest.addListener(function (request, sender, sendResponse) 
                 };
             }
         });
-    } else if (request.cmd == "xuexi_news") {
-        var notice = new window.Notification("Tips", {
-            icon: "icon16.png",
-            body: "正在学习文字新闻..."
-        });
-        notice.onshow = function () {
-            setTimeout(function () {
-                notice.close();
-            }, 5000);
-        };
-        sendResponse({
-            result: request.cmd
-        });
     } else if (request.cmd == "xuexi_video_news") {
         chrome.tabs.create({
             url: "https://www.xuexi.cn/4426aa87b0b64ac671c96379a3a8bd26/db086044562a57b441c24f2af1c8e101.html#11c4o0tv7nb-5"
-        }, function (result) {
-            var notice = new window.Notification("Tips", {
-                icon: "icon16.png",
-                body: "准备开始学习视频..."
-            });
-            notice.onshow = function () {
-                setTimeout(function () {
-                    notice.close();
-                }, 5000);
-            };
         });
         sendResponse({
             result: request.cmd
