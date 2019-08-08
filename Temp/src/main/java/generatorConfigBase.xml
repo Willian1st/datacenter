@@ -2,8 +2,8 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <!-- 指定数据连接驱动jar地址 -->
-    <classPathEntry location="F:\mvn\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
-    <context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
+    <classPathEntry location="D:\mvn\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
+	<context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
 		<!-- 注释 -->
 		<commentGenerator>
 			<property name="suppressAllComments" value="true" /><!-- 是否取消注释 -->
@@ -23,10 +23,16 @@
 			targetProject="Temp">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<table tableName="enterprise" domainObjectName="Enterprise" enableSelectByPrimaryKey="true" enableCountByExample="true"
-			enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="fasle"
-			enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
-            <property name="useActualColumnNames" value="true" />
+		<table tableName="document" domainObjectName="Document"  enableSelectByPrimaryKey="true"
+			enableCountByExample="true" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+			selectByExampleQueryId="fasle" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+			<property name="useActualColumnNames" value="true" />
+			<columnOverride column="remark" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="readTime" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="receiptTime" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="receiveTime" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<columnOverride column="userIds" javaType="java.lang.String" jdbcType="VARCHAR" />
 		</table>
 	</context>
 </generatorConfiguration>
