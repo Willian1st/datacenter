@@ -27,8 +27,10 @@
 			enableCountByExample="true" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
 			selectByExampleQueryId="fasle" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
 			<property name="useActualColumnNames" value="true" />
+			<!-- 文本blob使用String -->
 			<columnOverride column="remark" javaType="java.lang.String" jdbcType="VARCHAR" />
 			<columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR" />
+			<!-- 时间Date使用String -->
 			<columnOverride column="readTime" javaType="java.lang.String" jdbcType="VARCHAR" />
 			<columnOverride column="receiptTime" javaType="java.lang.String" jdbcType="VARCHAR" />
 			<columnOverride column="receiveTime" javaType="java.lang.String" jdbcType="VARCHAR" />

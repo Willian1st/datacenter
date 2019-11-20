@@ -23,9 +23,10 @@
 			targetProject="Temp">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<table tableName="qygzsjcjb_gm" domainObjectName="QygzsjcjbGm" enableSelectByPrimaryKey="true"
+		<table tableName="bzhdbgl" domainObjectName="Bzhdbgl" enableSelectByPrimaryKey="true"
 			enableCountByExample="true" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
 			selectByExampleQueryId="fasle" enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true">
+				<columnOverride column="sqxkfw" javaType="java.lang.String" jdbcType="VARCHAR" />
 		</table>
 	</context>
 </generatorConfiguration>
