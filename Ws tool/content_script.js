@@ -70,7 +70,6 @@
         chrome.extension.sendRequest({
             cmd: "guomei"
         }, function (response) {
-            debugger
             console.log(response.result);
             return;
             setTimeout(function () {
@@ -82,13 +81,13 @@
     });
 
     hotkeys('shift+x', function () {
+		xuexi();
         chrome.extension.sendRequest({
             cmd: "xuexi"
         });
     });
 
-    hotkeys('ctrl+shift+x', function () {
-        xuexi();
+    hotkeys('ctrl+shift+x', function () {        
         chrome.extension.sendRequest({
             cmd: "xuexi_video_news"
         });
@@ -262,6 +261,7 @@ var xuexi = function () {
     if (location.href.indexOf("www.xuexi.cn") != -1) {
         //获取新闻列表
         var section = $("[data-data-id]").siblings("div section");
+		
         var listNews = [];
         if (section.length) {
             section.each(function () {
