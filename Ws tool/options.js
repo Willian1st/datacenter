@@ -200,7 +200,7 @@ if (typeof (angular) != 'undefined') {
                     previewList: [
                         {
                             name: "城市总体规划",
-                            value: "http://gh.xz.gov.cn/ghj/UploadFile/c2e03efb-2f49-4070-9bc4-09db8dfb4f2a/%E5%BE%90%E5%B7%9E%E5%9F%8E%E5%B8%82%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E5%9B%BE.jpg"
+                            value: "picture/徐州城市总体规划图.jpg"
                         },
                         {
                             name: "轨道交通线网规划",
