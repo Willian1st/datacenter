@@ -68,6 +68,9 @@ if (typeof (angular) != 'undefined') {
                 show: function () {
                     $("#showHistory").show();
                 },
+				hide: function () {
+                    $("#showHistory").hide();
+                },
                 send: function (history) {
                     $("#showHistory").hide();
                     this.result = "";
@@ -125,7 +128,7 @@ if (typeof (angular) != 'undefined') {
 
                     $.ajax(options);
                 },
-                handleUrl: function () {
+                handleUrl: function () {					
                     if (this.url) {
                         if (this.url.indexOf("?") != -1) {
                             // get请求

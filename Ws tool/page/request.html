@@ -4,7 +4,7 @@
 	<div class="row center-block">
 		<form class="form-inline" ng-submit="request.send()">
 			<div class="form-group" style="width: 80%">
-				<input type="text" class="form-control" placeholder="请求地址" ng-model="request.url" ng-blur="request.check()";
+				<input type="text" class="form-control" placeholder="请求地址" ng-model="request.url" ng-blur="request.check()" ng-change="request.hide()"
 					ng-click="request.show()" style="width: 100%">
 				<ul class="list-unstyled bg-info" style="position: absolute;z-index: 1000;max-height: 200px;overflow-y: auto;display:none" id="showHistory">
 					<li style="cursor: pointer; border-bottom: 1px solid #ddd; padding: 8px;" class="text-info col-sm-11"
