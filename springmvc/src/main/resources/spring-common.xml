@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd  
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-4.0.xsd  
+        http://www.springframework.org/schema/context   
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    <context:component-scan base-package="w.g,com.longruan.ark.common">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <bean id="springContextUtil" class="w.g.util.SpringContextUtil"/>
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:system.properties</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="lrappdataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.c3p0.driverClassName}"/>
+        <property name="jdbcUrl" value="${jdbc.c3p0.url}"/>
+        <property name="user" value="${jdbc.c3p0.username}"/>
+        <property name="password" value="${jdbc.c3p0.password}"/>
+        <property name="initialPoolSize" value="${jdbc.c3p0.initialSize}"/>
+        <property name="minPoolSize" value="${jdbc.c3p0.initialSize}"/>
+        <property name="maxPoolSize" value="${jdbc.c3p0.maxActive}"/>
+        <property name="acquireIncrement" value="5"/>
+        <property name="maxIdleTime" value="${jdbc.c3p0.maxIdle}"/>
+        <property name="maxStatements" value="0"/>
+    </bean>
+
+
+    <!--生成sqlsession -->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="lrappdataSource"/>
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.longruan.ark.common.db.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSession"/>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="lrappdataSource"/>
+    </bean>
+    <tx:annotation-driven/>
+
+</beans>
