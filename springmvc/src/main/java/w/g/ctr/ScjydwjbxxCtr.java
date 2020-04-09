@@ -6,12 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/test")
-@Api(value = "TestCtr", tags = {"测试"})
-public class TestCtr extends DataBaseGenericCtr {
+@RequestMapping("/scjydwjbxx")
+@Api(value = "ScjydwjbxxCtr", tags = {"测试"})
+public class ScjydwjbxxCtr extends DataBaseGenericCtr {
 
-    TestCtr() {
-        tableName = "common_test";
+    ScjydwjbxxCtr() {
+        tableName = "safety.scjydwjbxx";
     }
 
 }
