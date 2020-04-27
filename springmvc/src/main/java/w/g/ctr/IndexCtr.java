@@ -6,11 +6,13 @@ import io.swagger.annotations.ApiOperation;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import w.g.util.DBCacheConfig;
 
 import java.util.Map;
 
@@ -33,5 +35,12 @@ public class IndexCtr {
     @ResponseBody
     public Object dbconfig(@RequestParam Map<String, Object> params) {
         return dataBaseConfig;
+    }
+
+    @GetMapping("/cache/config")
+    @ApiOperation(value = "配置", notes = "数据")
+    @ResponseBody
+    public Object cache() {
+        return DBCacheConfig.cacheManager;
     }
 }
